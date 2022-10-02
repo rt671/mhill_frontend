@@ -2,6 +2,7 @@ import React from "react/client";
 import './home.css'
 import video from '../../Assets/video.mp4'
 import {GrLocation} from 'react-icons/gr'
+import {HiFilter} from 'react-icons-hi'
 
 const Home = () => {
     return (
@@ -51,6 +52,21 @@ const Home = () => {
                                 <input type="range" max = "5000" min = "1000" />
                             </div>
                         </div>
+
+                        <div className="searchOptions">
+                            <HiFilter className="icon"/>
+                            <span>MORE FILTERS</span>
+                        </div>
+                </div>
+                <div className="homrFooterIcons flex">
+                    <div className="rightIcons">
+                        <FiFacebook className="icon"/>
+                        <AiOutlineInstagram className="icon"/>
+                        <FiFacFaTripadvisorebook className="icon"/>
+                    </div>
+                    <div className="leftIcons">
+                        
+                    </div>
                 </div>
             </div>
         </section>

@@ -52,5 +52,81 @@
                 font-size: 1.8rem;
             }
         }
+
+        .cardDiv {
+            position: relative;
+            padding: 2 rem 1 rem;
+            background: var(--whiteColor);
+            border-radius: 10px;
+            gap: 1 rem;
+
+            label {
+                display: block;
+                color: var(--textColor);
+                padding-bottom: 10px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            .label_total {
+                justify-content: space-between;
+                align-items: center;
+
+                .total {
+                    color: var(--textColor);
+                    font-size: 18px;
+                    padding-bottom: 10px;
+                }
+            }
+
+            .input {
+                background: none;
+                border: none;
+                outline: none;
+                width: 100%;
+                font-size: 13px;
+                font-weight: 500;
+                &::placeholder {
+                    font-size: 13px;
+                }
+            }
+
+            .icon {
+                font-size: 18px;
+                color: var(--PrimaryColor)
+                !important;
+                margin-left: 10px;
+            }
+
+            .input[type=range] {
+                background: blue;
+            }
+
+            .searchOptions {
+                position: absolute;
+                background: var(--gradientColor);
+                width: max-content;
+                bottom: -0.7rem;
+                column-gap: .8rem;
+                padding: 5px 1px;
+                border-radius: 3rem;
+                left: 50%;
+                transform: translate(-50%);
+                justify-content: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: var(--PrimaryColor);
+                }
+
+                .icon {
+                    font-size: 18px;
+                }
+
+                span {
+                    font-size: 13px;
+                }
+            }
+        }
     }
 }
