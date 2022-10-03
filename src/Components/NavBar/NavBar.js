@@ -1,19 +1,31 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './navbar.css'
 import {AiFillCloseCircle} from 'react-icons/ai'
+import {TbDotsVertical} from 'react-icons/tb'
+import {SiYourtraveldottv} from 'react-icons/si'
 
 const NavBar = () => {
+  const [active, setActive] = useState('navBar');
+  const showNav = ()=> {
+    setActive('navBar activeNavBar');
+  }
+
+  const closeNav = ()=> {
+    setActive('navBar');
+  }
+
   return (
     <section className = "navBarSection">
       <header className="header flex">
           <div className="logoDiv">
             <a href="#" className="logo flex">
+            <SiYourtraveldottv className="icon" />
               <h1>Travel.</h1>
             </a>
           </div>
 
-          <div className="navBar">
-            <ul className="navLists grid">
+          <div className={active}>
+            <ul className="navLists flex">
               <li className="navItem">
                 <a href="#" className="navLink">Home</a>
               </li>
@@ -38,9 +50,13 @@ const NavBar = () => {
               </button>
             </ul>
 
-            <div className="closeNavBar">
+            <div className="closeNavBar" onClick={closeNav}>
               <AiFillCloseCircle className="icon"/>
             </div>
+          </div>
+
+          <div className="openNavBar" onClick={showNav}>
+            <TbDotsVertical className="icon"></TbDotsVertical>
           </div>
       </header>
     </section>
