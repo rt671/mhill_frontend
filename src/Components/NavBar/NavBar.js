@@ -44,16 +44,18 @@ const NavBar = () => {
               <li className="navItem">
                 <a href="#" className="navLink">Contact</a>
               </li>
-
-              <button className="btn">
+            
+            <button className="btn">
                 <a href="#">BOOK NOW</a>
-              </button>
-            </ul>
+            </button>
 
+            </ul>
+            
+           
             <div className="closeNavBar" onClick={closeNav}>
               <AiFillCloseCircle className="icon"/>
             </div>
-          </div>
+            </div>
 
           <div className="openNavBar" onClick={showNav}>
             <TbDotsVertical className="icon"></TbDotsVertical>
