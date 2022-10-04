@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import './home.css'
-import video from '../../Assets/video.mp4'
+// import video from '../../Assets/video.mp4'
 import {GrLocation} from 'react-icons/gr'
 import {HiFilter} from 'react-icons/hi'
 import {AiOutlineInstagram } from "react-icons/ai";
@@ -73,7 +73,7 @@ const Home = () => {
                             <span>MORE FILTERS</span>
                         </div>
                 </div>
-                
+
                 <div className="homrFooterIcons flex">
                     <div className="rightIcons">
                         <FiFacebook className="icon"/>

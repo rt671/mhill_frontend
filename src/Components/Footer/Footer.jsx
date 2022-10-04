@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import './footer.css'
-// import video2 from '../../Assets/video2.mp4'
+import video2 from '../../Assets/video2.mp4'
 import { FiSend, FiChevronRight } from "react-icons/fi";
 import { MdOutlineTravelExplore } from "react-icons/md";
 import { AiOutlineTwitter, AiFillYoutube, AiFillInstagram } from "react-icons/ai"
@@ -19,7 +19,7 @@ const Footer = () => {
   return (
     <section className="footer">
       <div className="videoDiv">
-        {/* <video src='video2' loop autoPlay muted type="video/mp4"></video> */}
+        <video src= {video2} loop autoPlay muted type="video/mp4"></video>
       </div>
 
       <div className="secContent container">
