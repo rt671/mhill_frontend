@@ -73,7 +73,11 @@
             padding: 2 rem 1 rem;
             background: var(--whiteColor);
             border-radius: 10px;
+            margin:auto;
             gap: 1 rem;
+            width:50%;
+            align-items: center;
+            justify-content: center;
 
             label {
                 display: block;

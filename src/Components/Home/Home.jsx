@@ -29,15 +29,15 @@ const Home = () => {
                 <div className="textDiv">
                     
                     <span data-aos="fade-up" className="smallText">
-                        Packages Offered
+                        The best tourism experience ever....
                     </span>
 
                     <h1 data-aos="fade-up" className="homeTitle">
-                        Search Your Preferred Destination
+                        M Hill Adventures
                     </h1>
                 </div>
 
-                <div data-aos="fade-up" className="cardDiv grid">
+                <div data-aos="fade-up" className="cardDiv flex">
                     
                         <div className="destinationInput">
                             <label htmlFor="city">
