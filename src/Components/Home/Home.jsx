@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import './home.css'
-import video from '../../Assets/video2.mp4'
+import video from '../../Assets/video.mp4'
 import {GrLocation} from 'react-icons/gr'
 import {HiFilter} from 'react-icons/hi'
 import {AiOutlineInstagram } from "react-icons/ai";
@@ -74,7 +74,7 @@ const Home = () => {
                         </div>
                 </div>
 
-                <div className="homrFooterIcons flex">
+                <div className="homeFooterIcons flex">
                     <div className="rightIcons">
                         <FiFacebook className="icon"/>
                         <AiOutlineInstagram className="icon"/>
