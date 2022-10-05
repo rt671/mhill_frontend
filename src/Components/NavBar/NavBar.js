@@ -20,7 +20,7 @@ const NavBar = () => {
           <div className="logoDiv">
             <a href="#" className="logo flex">
             <SiYourtraveldottv className="icon" />
-              <h1>Travel.</h1>
+              <h1>MHill Adventures.</h1>
             </a>
           </div>
 

@@ -1,9 +1,23 @@
+:root{
+    --PrimaryColor: hsl(199, 100%, 33%);
+    --SecondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 225);
+}
+
 .header{
     position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--SecondaryColor);
+    background-color: var(--whiteColorDeam);
     width: 100%;
     padding: 1rem;
     z-index: 1000;
@@ -18,17 +32,19 @@
     justify-content: center;
 }
 
-logo .icon{
+.logo .icon{
     font-size: 25px;
     color: var(--PrimaryColor);
     transform: translate(5px);
+    margin:1rem;
 }
 
-.openNavBar .icon, .closeNavBar{
-    display: none;
+.btn a {
+    color:var(--whiteColor);
+    font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 911px) {
     .navBar{
         position:absolute;
         background:white;
@@ -88,11 +104,6 @@ logo .icon{
     margin-top: 1rem;
 }
 
-.btn a{
-    font-weight: 600;
-    color: white;
-}
-
 }
 
 .navLink{
@@ -104,4 +115,47 @@ logo .icon{
     color: var(--PrimaryColor)
 }
 
+@media screen and (min-width: 912px){
+    .openNavBar, .closeNavBar {
+        display:none;
+    }
 
+    .header {
+        padding: 1.5rem, 2rem;
+    }
+
+    .navBar .navLists {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction: row;
+    }
+
+    .navItem .navLink {
+        color: var(--textColor);
+        padding: 0 0.45rem;
+        font-size:0.9rem;
+        font-weight:500;
+    }
+
+    .navLink:hover {
+        color:var(--PrimaryColor);
+    }
+
+    .btn {
+        margin-left:1rem; 
+    }
+
+}
+
+@media screen and (min-width: 1100px) {
+    .navItem {
+        padding: 0 0.7rem;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .header {
+        padding: 1rem 0.5rem;
+    }
+}
