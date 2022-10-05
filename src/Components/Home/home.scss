@@ -179,14 +179,15 @@
 
             .textDiv {
                 .smallText {
-                    font-size: 16px;
+                    font-size: 14px;
                     
                 }
 
                 .homeTitle {
                     position: relative;
                     font-size: 2.3rem;
-                    width: max-content;
+                    width: 100%;
+                    // width: max-content;
 
                     &::after {
                         position: absolute;
@@ -232,10 +233,12 @@
         .homeContent {
             padding-left: 0;
             padding-right: 0;
+            width: 90%;
 
             .cardDiv {
                 padding: 2rem 1 rem;
-                grid-template-columns: repeat(3, 1fr);
+                width: 50%;
+                // grid-template-columns: repeat(3, 1fr);
                 .input {
                     margin-bottom: 1rem;
                 }

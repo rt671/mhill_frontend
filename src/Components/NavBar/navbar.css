@@ -37,6 +37,8 @@
     color: var(--PrimaryColor);
     transform: translate(5px);
     margin:1rem;
+    height: 60px;
+    width: auto;
 }
 
 .btn a {

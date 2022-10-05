@@ -161,14 +161,12 @@
     padding: 1.5rem 2rem;
   }
   .home .homeContent .textDiv .smallText {
-    font-size: 16px;
+    font-size: 14px;
   }
   .home .homeContent .textDiv .homeTitle {
     position: relative;
     font-size: 2.3rem;
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+    width: 100%;
   }
   .home .homeContent .textDiv .homeTitle::after {
     position: absolute;
@@ -202,10 +200,11 @@
   .home .homeContent {
     padding-left: 0;
     padding-right: 0;
+    width: 90%;
   }
   .home .homeContent .cardDiv {
     padding: 2rem 1 rem;
-    grid-template-columns: repeat(3, 1fr);
+    width: 50%;
   }
   .home .homeContent .cardDiv .input {
     margin-bottom: 1rem;

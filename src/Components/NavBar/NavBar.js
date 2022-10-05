@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import './navbar.css'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {TbDotsVertical} from 'react-icons/tb'
-import {SiYourtraveldottv} from 'react-icons/si'
+import logo from '../../Assets/logo.png'
+// import {SiYourtraveldottv} from 'react-icons/si'
 
 const NavBar = () => {
   const [active, setActive] = useState('navBar');
@@ -19,8 +20,8 @@ const NavBar = () => {
       <header className="header flex">
           <div className="logoDiv">
             <a href="#" className="logo flex">
-            <SiYourtraveldottv className="icon" />
-              <h1>MHill Adventures.</h1>
+            <img src={logo} className="icon" />
+              <h1>M Hill Adventure.</h1>
             </a>
           </div>
 
