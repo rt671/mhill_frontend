@@ -74,7 +74,7 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Insurance
+                Hiking Tips
               </li>
 
               <li className="footerList flex">
@@ -113,11 +113,6 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                HostelWorld
-              </li>
-
-              <li className="footerList flex">
-                <FiChevronRight className="icon"/>
                 Trivago
               </li>
 
@@ -142,17 +137,17 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                ABC Place
+                Kuari Pass Trek
               </li>
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                PQR Place
+                Dronagiri / Bagani Trek
               </li>
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                XYZ Place
+                Brahmatal Trek
               </li>
             </div>
           </div>

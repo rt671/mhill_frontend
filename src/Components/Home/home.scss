@@ -176,9 +176,15 @@
 @media screen and (min-width: 500px) {
     .home {
         .homeContent {
+
+            .cardDiv {
+                padding: 1.5rem 2rem;
+            }
+
             .textDiv {
                 .smallText {
                     font-size: 16px;
+                    
                 }
 
                 .homeTitle {

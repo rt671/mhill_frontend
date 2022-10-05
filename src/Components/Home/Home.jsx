@@ -51,7 +51,7 @@ const Home = () => {
 
                         <div className="dateInput">
                             <label htmlFor="date">
-                                Select trip start and end dates:
+                                Select trip dates:
                             </label>
                             <div className="input flex">
                                 <input type="date"/>
