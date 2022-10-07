@@ -16,17 +16,17 @@ const Data = [
       id:1,
       imgSrc: img1,
       planTitle: 'qwerty',
-      destTitle: 'Mountains',
-      location: 'Nigeria',
+      destTitle: 'Satopanth/Swargarohini Trek',
+      location: 'Uttarakhand',
       fees: '\u20A8 13999',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+      description: 'Satopanth Tal is a lake located in Satopanth, India, located in the midst of snow-capped peaks at an altitude of 4600m (15,100 ft) above sea-level. The lake is considered to be of religious significance to the local people and residents of Mana village. Tourists can enjoy ecstatic views of the Himalyas while undergoing the Trek'
     },
     
     {
       id:2,
       imgSrc: img2,
       planTitle: 'qwerty',
-      destTitle: 'Mountains',
+      destTitle: 'Kausi Pass Trek',
       location: 'Nigeria',
       fees: '\u20A8 13999',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
@@ -36,7 +36,7 @@ const Data = [
       id:3,
       imgSrc: img3,
       planTitle: 'qwerty',
-      destTitle: 'Mountains',
+      destTitle: 'Dronagiri / Bagani Trek',
       location: 'Nigeria',
       fees: '\u20A8 13999',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
@@ -46,11 +46,101 @@ const Data = [
       id:4,
       imgSrc: img4,
       planTitle: 'qwerty',
-      destTitle: 'Mountains',
-      location: 'Nigeria',
+      destTitle: 'Kakbhusandi Tal Trek',
+      location: 'India',
       fees: '\u20A8 13999',
       description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
-    }
+    },
+
+    {
+        id:5,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Valley of Flowers / Bhunder Khai Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:6,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Neelkanth Khal Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:7,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Auli / Kuari Pass / Ghat Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:8,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Sapthkund Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:9,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Ghat to Hemkund / Routhi Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:10,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Panpatia Col Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:11,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Auli / Kuari Pass / RoopKund Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:12,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Vasundhra Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
+
+    {
+        id:13,
+        imgSrc: img4,
+        planTitle: 'qwerty',
+        destTitle: 'Neelkanth Base Camp Trek',
+        location: 'India',
+        fees: '\u20A8 13999',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt illo inventore vitae iure libero eum accusantium cum exercitationem nulla quibusdam ex nemo impedit, pariatur nobis minima eligendi quod similique! Quisquam? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint in excepturi, distinctio ratione nisi iste tempore rem quia, sed nesciunt dolore, ea autem explicabo dicta voluptatum? Et molestiae est aperiam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur iusto quae, autem vero suscipit, temporibus quas similique est alias impedit deleniti nemo aspernatur numquam et officiis voluptas molestiae provident illum.'
+    },
 ]
 
 const Main = () => {
