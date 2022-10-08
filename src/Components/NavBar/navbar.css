@@ -139,7 +139,9 @@
         font-size:0.9rem;
         font-weight:500;
     }
-
+    .link{
+        color:var(--textColor);
+    }
     .navLink:hover {
         color:var(--PrimaryColor);
     }
