@@ -142,7 +142,7 @@
     .link{
         color:var(--textColor);
     }
-    .navLink:hover {
+    .navLink:hover, .link:hover {
         color:var(--PrimaryColor);
     }
 

@@ -4,21 +4,23 @@ import "./details.css";
 import React, {useState, useEffect} from 'react'
 
 const Details = () => {
-    const [trips, setTrips] = useState([]);    
+    const location = useLocation()
+    const path = (location.pathname.split("/")[2]);
+    const [trip, setTrip] = useState([]);    
 
     useEffect(() => {
-        axios.get("http://localhost:5000/trips/")
+        axios.get("http://localhost:5000/trips/" + path)
         .then(res => 
             {
                 console.log(res.data);
-                setTrips(res.data);
+                setTrip(res.data);
             })
         .catch(err => console.log(err)); 
-    }, [])
+    }, [path])
 
   return (
     <div className="post">
-        <img className="postImg"></img>
+        <img className="postImg" src="trip.photo"></img>
     </div>
   )
 }
