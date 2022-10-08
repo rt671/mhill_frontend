@@ -3,6 +3,7 @@ import './navbar.css'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {TbDotsVertical} from 'react-icons/tb'
 import logo from '../../Assets/logo.png'
+import { Link } from 'react-router-dom'
 // import {SiYourtraveldottv} from 'react-icons/si'
 
 const NavBar = () => {
@@ -21,7 +22,7 @@ const NavBar = () => {
           <div className="logoDiv">
             <a href="#" className="logo flex">
             <img src={logo} className="icon" />
-              <h1>M Hill Adventure.</h1>
+              <h1>M Hill Adventures.</h1>
             </a>
           </div>
 
@@ -31,7 +32,7 @@ const NavBar = () => {
                 <a href="#" className="navLink">Home</a>
               </li>
               <li className="navItem">
-                <a href="#" className="navLink">Packages</a>
+                <a className="navLink"><Link className="link" to="/packages">Packages</Link></a>
               </li>
               <li className="navItem">
                 <a href="#" className="navLink">About</a>

@@ -1,19 +1,11 @@
 import React, {useEffect, useState} from "react";
-import './main.css'
-
-import img1 from '../../Assets/img1.jpg'
-import img2 from '../../Assets/img2.JPG'
-import img3 from '../../Assets/img3.JPG'
-import img4 from '../../Assets/img4.JPG'
-
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import axios from 'axios'
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from "react-icons/hi";
 
-const Main = () => {
+const Package = () => {
     const [trips, setTrips] = useState([]);
-    // react hook for scroll animation
     useEffect(() => {
         Aos.init({duration: 2000})
     }, [])
@@ -28,11 +20,12 @@ const Main = () => {
         .catch(err => console.log(err)); 
     }, [])
 
+
     return (
         <section className="main container section">
             <div className="secTitle">
-                <h3  data-aos="fade-right" className="title">
-                    Most Visited Destinations
+                <h3 className="title">
+                    Packages Offered
                 </h3>
             </div>
 
@@ -75,4 +68,4 @@ const Main = () => {
     )
 }
 
-export default Main;
+export default Package
