@@ -10,6 +10,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import axios from 'axios'
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const Main = () => {
     const [trips, setTrips] = useState([]);
@@ -61,8 +62,8 @@ const Main = () => {
 
                                     <div className="desc">
                                         <p>{trip.desc}</p>
-                                        <button className="btn flex">
-                                            DETAILS <HiOutlineClipboardCheck className="icon"/>
+                                        <button className="btn flex"><Link to={`/trips/${trip._id}`} className="link">
+                                            DETAILS </Link><HiOutlineClipboardCheck className="icon"/>
                                         </button>
                                     </div>
                                 </div>
