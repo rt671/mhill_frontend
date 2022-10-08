@@ -15,7 +15,11 @@
   
   .main {
     width: 100%;
+    position: relative;
+    top: 50px;
+    margin-bottom: 100px;
   }
+
   .main .secTitle .title {
     position: relative;
     width: -webkit-max-content;
@@ -25,6 +29,7 @@
     margin: 1rem 0;
     z-index: 2;
   }
+
   .main .secTitle .title::after {
     position: absolute;
     content: "";
@@ -154,4 +159,4 @@
     .secContent .singleDestination {
       height: auto;
     }
-  }/*# sourceMappingURL=main.css.map */
+  } /*# sourceMappingURL=main.css.map */
