@@ -26,10 +26,10 @@ const Main = () => {
     return (
         <section className="main container section">
             <div className="secTitle">
-                <h3  data-aos="fade-right" className="title">
-                    Most Visited Destinations
+                <h3 data-aos="fade-right" className="title">
+                  Most Visited Destinations
                 </h3>
-            </div>
+              </div>
 
             <div className="secContent grid">
                 {
@@ -50,7 +50,7 @@ const Main = () => {
 
                                     <div className="flex fees">
                                         <div className="price">
-                                            <h5>{trip.price}</h5>
+                                            <h5>₹{trip.price}</h5>
                                         </div>
                                     </div>
 

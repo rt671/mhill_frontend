@@ -9,7 +9,6 @@ const Details = () => {
     const path = (location.pathname.split("/")[2]);
     
     const [trip, setTrip] = useState([]);    
-
     useEffect(() => {
         axios.get("http://localhost:5000/trips/" + path)
         .then(res => 
@@ -18,43 +17,28 @@ const Details = () => {
                 setTrip(res.data);
             })
         .catch(err => console.log(err)); 
-    }, [path])
+    }, [path]);
 
   return (
-    <div className="post">
-        <img className="postImg" src="trip.photo"></img>
+    <div className="singleTrip">
+        <div className="singleTripWrapper">
+        <img className="singleTripImg" src={trip.photo}></img>
+        <h1 className="singleTripTitle">{trip.destination}</h1>
+        <h2 className="singleTripTitle">{trip.state}</h2>
+        </div>
+        <div className="singleTripInfo">
+          <span>
+            Price: ₹
+            <b className="singleTripPrice">
+                {trip.price}
+            </b>
+          </span>
+        </div>
+        <p className="singlePostDesc">
+            {trip.desc}
+        </p>
     </div>
   )
 }
 
 export default Details
-
-
-
-//   return (
-//     <div className="post">
-//       {post.photo &&
-//         <img
-//           className="postImg"
-//           src={PF + post.photo || `https://wallpaperaccess.com/full/2125015.jpg`}
-//           alt=""
-//         />
-//       }
-//       <div className="postInfo">
-//         <div className="postCats">
-//           {post.categories.map(c => (
-//             <span className="postCat">{c.name}</span>
-//           ))}
-//         </div>
-//         <span className="postTitle">
-//           <Link to={`/post/${post._id}`} className="link">
-//             {post.title}
-//           </Link>
-//         </span>
-//         <hr />
-//         <span className="postDate">{new Date(post.createdAt).toDateString()}</span>
-//       </div>
-//       <p className="postDesc">{post.desc}</p>
-//     </div>
-//   );
-// }
