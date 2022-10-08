@@ -86,7 +86,9 @@
 
                 input {
                     width: 100%;
-                    padding: .5rem .6rem;
+                    
+                    margin-top: 1rem;
+                    padding: 0.5rem .6rem;
                     border-radius: 3rem;
                     border: 1px solid var(--whiteColor);
                     outline: none;
@@ -148,10 +150,12 @@
             
             .footerParagraph {
                 font-size: 13px;
+                margin-left: 10px;
                 color: var(--textColor);
             }
 
             .footerSocials {
+                margin-left: 10px;
                 column-gap: .5rem;
 
                 .icon {
@@ -165,8 +169,8 @@
             }
 
             .footerLinks {
-                flex-basis: 50%;
-                width: 100%;
+                flex-basis: 25%;
+                width: 200%;
                 gap: 1rem;
                 grid-template-columns: repeat(2, 1fr);
                 justify-content: space-between;
@@ -182,7 +186,7 @@
                     .footerList {
                         font-size: 15px;
                         color: var(--textColor);
-                        transition: .3s ease-in-out;
+                        transition: .1s ease-in-out;
 
                         .icon {
                             font-size: 15px;
@@ -275,12 +279,12 @@
 
                 .inputDiv {
                     width: max-content;
-                    flex-direction: flex-start;
-                    justify-content: flex-start;
+                    flex-direction: row;
+                    justify-content: space-between;
                 }
 
                 input {
-                    width: 60%;
+                    width: 80%;
                 }
 
                 .btn {
@@ -315,11 +319,13 @@
                 .footerIntro {
                     .footerParagraph {
                         font-size: 15px;
+                        margin-left: 20px;
                         color: var(--textColor);
                     }
 
                     .footerSocials {
                         column-gap: .5rem;
+                        margin-left: 20px;
                         .icon {
                             color: var(--textColor);
                             font-size: 25px;
