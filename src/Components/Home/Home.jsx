@@ -1,8 +1,6 @@
 import React, {useEffect} from "react";
 import './home.css'
 import video from '../../Assets/video2.mp4'
-import {GrLocation} from 'react-icons/gr'
-import {HiFilter} from 'react-icons/hi'
 import {AiOutlineInstagram } from "react-icons/ai";
 import {FaTripadvisor} from 'react-icons/fa';
 import {FiFacebook} from 'react-icons/fi';
@@ -35,19 +33,6 @@ const Home = () => {
                     <h1 data-aos="fade-up" className="homeTitle">
                         M Hill Adventures
                     </h1>
-                </div>
-
-                <div data-aos="fade-up" className="cardDiv flex">
-                    
-                        <div className="destinationInput">
-                            <label htmlFor="city">
-                                Search Your Destination
-                            </label>
-                            <div className="input flex">
-                                <input type="text" placeholder='Enter name here...'/>
-                                <GrLocation className = "icon"/>
-                            </div>
-                        </div>
                 </div>
 
                 <div className="homeFooterIcons flex">

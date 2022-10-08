@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from "react";
 import './package.css';
 import Aos from 'aos'
+import {GrLocation} from 'react-icons/gr'
+import {HiFilter} from 'react-icons/hi'
 // import 'aos/dist/aos.css'
 import axios from 'axios'
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from "react-icons/hi";
@@ -24,6 +26,20 @@ const Package = () => {
 
     return (
         <section className="main container section">
+
+            <div data-aos="fade-up" className="cardDiv flex">
+                    
+                    <div className="destinationInput">
+                        <label htmlFor="city">
+                            Search Your Destination
+                        </label>
+                        <div className="input flex">
+                            <input type="text" placeholder='Enter name here...'/>
+                            <GrLocation className = "icon"/>
+                        </div>
+                    </div>
+            </div>
+
             <div className="secTitle">
                 <h3 className="title">
                     Packages Offered
