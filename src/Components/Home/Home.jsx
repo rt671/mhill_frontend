@@ -44,7 +44,7 @@ const Home = () => {
                                 Search Your Destination
                             </label>
                             <div className="input flex">
-                                <input type="text" placeHolder='Enter name here...'/>
+                                <input type="text" placeholder='Enter name here...'/>
                                 <GrLocation className = "icon"/>
                             </div>
                         </div>
