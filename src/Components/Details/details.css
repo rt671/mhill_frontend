@@ -1,0 +1,24 @@
+.singleTrip {
+    flex: 9;
+  }
+  
+  .singleTripWrapper {
+    padding: 20px;
+    padding-right: 0;
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .singleTripImg {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  .singleTripTitle {
+    text-align: center;
+    margin: 10px;
+    font-size: 28px;
+    font-family: "Poppins", sans-serif;
+  }

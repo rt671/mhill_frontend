@@ -16,6 +16,7 @@
 .main {
   width: 100%;
 }
+
 .main .secTitle .title {
   position: relative;
   width: -webkit-max-content;
@@ -25,6 +26,7 @@
   margin: 1rem 0;
   z-index: 2;
 }
+
 .main .secTitle .title::after {
   position: absolute;
   content: "";
@@ -35,6 +37,7 @@
   bottom: 5px;
   z-index: -1;
 }
+
 .main .secContent {
   justify-content: center;
   gap: 1.5rem;
@@ -120,6 +123,7 @@
   font-size: 13.5px;
   color: var(--textColor);
   font-weight: 500;
+  width:max-content;
 }
 .main .secContent .singleDestination .cardInfo .desc .btn {
   margin-top: 1rem;
