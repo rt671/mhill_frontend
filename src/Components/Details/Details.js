@@ -1,11 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./details.css";
+import axios from "axios";
 
 import React, {useState, useEffect} from 'react'
 
 const Details = () => {
-    const location = useLocation()
+    const location = useLocation();
     const path = (location.pathname.split("/")[2]);
+    
     const [trip, setTrip] = useState([]);    
 
     useEffect(() => {

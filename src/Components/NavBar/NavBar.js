@@ -29,10 +29,10 @@ const NavBar = () => {
           <div className={active}>
             <ul className="navLists flex">
               <li className="navItem">
-                <a href="#" className="navLink"><Link className="link" to="/">Home</Link></a>
+                <Link className="navLink link" to="/">Home</Link>
               </li>
               <li className="navItem">
-                <a className="navLink"><Link className="link" to="/packages">Packages</Link></a>
+                <Link className="navLink link" to="/packages">Packages</Link>
               </li>
               <li className="navItem">
                 <a href="#" className="navLink">About</a>

@@ -42,7 +42,7 @@ const Package = () => {
                                 }
                                 <div className="cardInfo">
                                     <h4 className="destTitle">{trip.destination}</h4>
-                                    <span continent flex>
+                                    <span className="continent flex">
                                         <HiOutlineLocationMarker className="icon"/>
                                         <span className="name">{trip.state}</span>
                                     </span>

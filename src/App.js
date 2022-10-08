@@ -6,6 +6,7 @@ import NavBar from './Components/NavBar/NavBar'
 import Home from './Components/Home/Home'
 import Footer from './Components/Footer/Footer'
 import Package from './Components/Package/Package';
+import Details from './Components/Details/Details';
 
 const App = () => {
   return (
@@ -14,8 +15,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<><Home/><Main/></>}/>
         <Route path="/packages" element={<Package/>}></Route>
-        {/* <Route path="/trips/:id" element={<Trip/>}/>
-        */}
+        <Route path="/trips/:id" element={<Details/>}/>
       </Routes>
       <Footer/>
     </Router>

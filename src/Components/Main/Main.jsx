@@ -1,11 +1,5 @@
 import React, {useEffect, useState} from "react";
 import './main.css'
-
-import img1 from '../../Assets/img1.jpg'
-import img2 from '../../Assets/img2.JPG'
-import img3 from '../../Assets/img3.JPG'
-import img4 from '../../Assets/img4.JPG'
-
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 import axios from 'axios'
@@ -49,7 +43,7 @@ const Main = () => {
                                 }
                                 <div className="cardInfo">
                                     <h4 className="destTitle">{trip.destination}</h4>
-                                    <span continent flex>
+                                    <span className="continent flex">
                                         <HiOutlineLocationMarker className="icon"/>
                                         <span className="name">{trip.state}</span>
                                     </span>
