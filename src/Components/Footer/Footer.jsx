@@ -59,7 +59,7 @@ const Footer = () => {
               <FaTripadvisor className="icon"/>
             </div>
           </div>
-
+          
           {/* Group A */}
           <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks grid">
             <div className="linkGroup">
@@ -69,17 +69,7 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Services
-              </li>
-
-              <li className="footerList flex">
-                <FiChevronRight className="icon"/>
                 Hiking Tips
-              </li>
-
-              <li className="footerList flex">
-                <FiChevronRight className="icon"/>
-                Agency
               </li>
 
               <li className="footerList flex">
@@ -90,20 +80,6 @@ const Footer = () => {
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Payment
-              </li>
-            </div>
-          </div>
-
-          {/* Group B */}
-          <div data-aos="fade-up" data-aos-duration="4000" className="footerLinks grid">
-            <div className="linkGroup">
-              <span className="groupTitle">
-                PARTNERS
-              </span>
-
-              <li className="footerList flex">
-                <FiChevronRight className="icon"/>
-                Bookings
               </li>
 
               <li className="footerList flex">
@@ -120,10 +96,11 @@ const Footer = () => {
                 <FiChevronRight className="icon"/>
                 Trip Advisor
               </li>
+
             </div>
           </div>
 
-          {/* Group C */}
+          {/* Group B */}
           <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks grid">
             <div className="linkGroup">
               <span className="groupTitle">
