@@ -123,7 +123,11 @@
   font-size: 13.5px;
   color: var(--textColor);
   font-weight: 500;
-  width:max-content;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .main .secContent .singleDestination .cardInfo .desc .btn {
   margin-top: 1rem;

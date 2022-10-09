@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 
 const Main = () => {
     const [trips, setTrips] = useState([]);
-    // react hook for scroll animation
     useEffect(() => {
         Aos.init({duration: 2000})
     }, [])
@@ -56,9 +55,9 @@ const Main = () => {
 
                                     <div className="desc">
                                         <p>{trip.desc}</p>
-                                        <button className="btn flex"><Link to={`/trips/${trip._id}`} className="link">
-                                            DETAILS </Link><HiOutlineClipboardCheck className="icon"/>
-                                        </button>
+                                        <Link to={`/trips/${trip._id}`} className="link"><button className="btn flex">
+                                            DETAILS <HiOutlineClipboardCheck className="icon"/>
+                                        </button></Link>
                                     </div>
                                 </div>
                             </div>
