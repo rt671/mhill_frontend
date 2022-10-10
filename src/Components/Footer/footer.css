@@ -76,6 +76,7 @@
 .footer .secContent .contactDiv .inputDiv {
   width: 100%;
   gap: 1rem;
+  border: 50px solid black;
   flex-direction: column;
 }
 .footer .secContent .contactDiv .inputDiv input {
@@ -101,11 +102,11 @@
   opacity: 0.5;
 }
 .footer .secContent .contactDiv .inputDiv .btn {
+  padding-top: 0.5rem;
   width: 100%;
   justify-content: center;
   color: var(--whiteColor);
   font-weight: 500;
-  gap: 0.5rem;
 }
 .footer .secContent .contactDiv .inputDiv .btn .icon {
   font-size: 18px;
