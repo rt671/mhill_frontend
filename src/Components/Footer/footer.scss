@@ -300,7 +300,7 @@
         padding: 5rem 0;
         .secContent {
             .footerCard {
-                flgit ex-direction: row;
+                flex-direction: row;
 
                 .footerLinks {
                     grid-template-columns: repeat(3,1fr);
