@@ -41,7 +41,7 @@ const Details = () => {
       </div>
       <div className="singleTripInfo">
         <div className="singleTripInfoDiv">
-          Duration: <b>5 NIGHTS 4 DAYS</b>
+          Duration: <b>{trip.duration}</b>
         </div>
         <div className="singleTripInfoDiv">
           Price: ₹<b>{trip.price}</b>

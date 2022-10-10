@@ -41,13 +41,18 @@ const Main = () => {
                                 </div>
                                 }
                                 <div className="cardInfo">
+                                    <div className="titles">
                                     <h4 className="destTitle">{trip.destination}</h4>
                                     <span className="continent flex">
                                         <HiOutlineLocationMarker className="icon"/>
                                         <span className="name">{trip.state}</span>
                                     </span>
+                                    </div>
 
                                     <div className="flex fees">
+                                        <div className="duration">
+                                            <h5>{trip.duration}</h5>
+                                        </div>
                                         <div className="price">
                                             <h5>₹{trip.price}</h5>
                                         </div>

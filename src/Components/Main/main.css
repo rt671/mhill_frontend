@@ -72,9 +72,13 @@
 .main .secContent .singleDestination .cardInfo {
   padding: 1rem;
 }
+
+.main .secContent .singleDestination .cardInfo .titles {
+  margin-left:12px;
+}
 .main .secContent .singleDestination .cardInfo .destTitle {
   color: var(--blackColor);
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .main .secContent .singleDestination .cardInfo .continent {
   gap: 0.5rem;
@@ -90,6 +94,7 @@
 }
 .main .secContent .singleDestination .cardInfo .fees {
   width: 100%;
+  /* flex-direction:column; */
   justify-content: space-between;
   padding: 1rem;
   margin: 1rem 0;
@@ -101,19 +106,21 @@
   max-width: 100px;
   line-height: 20px;
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 .main .secContent .singleDestination .cardInfo .fees .grade small {
-  text-align: center;
   background: var(--gradientColor);
   border-radius: 1rem;
   color: var(--whiteColor);
   padding: 1px 10px;
   font-size: 10px;
 }
+.main .secContent .singleDestination .cardInfo .fees .duration {
+  font-size: 1.25rem;
+  color: var(--blackColor);
+}
 .main .secContent .singleDestination .cardInfo .fees .price {
-  font-size: 2rem;
+  font-size: 1.25rem;
   color: var(--blackColor);
 }
 .main .secContent .singleDestination .cardInfo .desc {
@@ -121,12 +128,25 @@
   color: var(--textColor);
   font-weight: 500;
 }
+
+.main .secContent .singleDestination .cardInfo .desc p{
+  overflow:hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.main .secContent .singleDestination .cardInfo .desc {
+  padding-left:15px;
+}
 .main .secContent .singleDestination .cardInfo .desc .btn {
   margin-top: 1rem;
   color: var(--whiteColor);
   font-weight: 600;
   justify-content: space-between;
   gap: 0.5rem;
+  margin-left:-2px;
 }
 .main .secContent .singleDestination .cardInfo .desc .btn .icon {
   align-self: center;
@@ -155,3 +175,18 @@
     height: auto;
   }
 }/*# sourceMappingURL=main.css.map */
+
+@media screen and (max-width:1000px) {
+  .main .secContent .singleDestination .cardInfo .fees {
+    flex-direction:column;
+  }
+
+  .main .secContent .singleDestination .cardInfo .desc {
+    text-align: center;
+  }
+
+  .main .secContent .singleDestination .cardInfo .desc .btn{
+    margin:auto;
+    margin-top:20px;
+  }
+}
