@@ -9,13 +9,29 @@ const Details = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
 
-  const [trip, setTrip] = useState([]);
+  const [trip, setTrip] = useState({
+    destination: "",
+    state: "",
+    photo: "",
+    price: "",
+    duration: "",
+    months: "",
+    desc: [],
+    day1: "",
+    day2: "",
+    day3: "",
+    day4: "",
+    day5: "",
+    mostVis: "",
+  });
+
   useEffect(() => {
     axios
       .get("http://localhost:5000/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrip(res.data);
+        console.log(trip.day1);
       })
       .catch((err) => console.log(err));
   }, [path]);
@@ -49,25 +65,43 @@ const Details = () => {
       </div>
       <div className="singleTripDesc">
         {trip.desc.map((para) => {
-            return (<p className="intro">{para}</p>)
-        })
-        }
-        {trip.day1 && (<><div className="dayX">Day 1</div>
-        <p>{trip.day1}</p></>)}
-        {trip.day2 && (<><div className="dayX">Day 2</div>
-        <p>{trip.day2}</p></>)}
-        {trip.day3 && (<><div className="dayX">Day 3</div>
-        <p>{trip.day3}</p></>)}
-        {trip.day4 && (<><div className="dayX">Day 4</div>
-        <p>{trip.day4}</p></>)}
-        {trip.day5 && (<><div className="dayX">Day 5</div>
-        <p>{trip.day5}</p></>)}
+          return (<p className="intro">{para}</p>);
+        })}
+        {/* {console.log(trip.desc[2])} */}
+        {/* <p>{trip.desc[2]}</p> */}
+        {trip.day1 && (
+          <>
+            <div className="dayX">Day 1</div>
+            <p>{trip.day1}</p>
+          </>
+        )}
+        {trip.day2 && (
+          <>
+            <div className="dayX">Day 2</div>
+            <p>{trip.day2}</p>
+          </>
+        )}
+        {trip.day3 && (
+          <>
+            <div className="dayX">Day 3</div>
+            <p>{trip.day3}</p>
+          </>
+        )}
+        {trip.day4 && (
+          <>
+            <div className="dayX">Day 4</div>
+            <p>{trip.day4}</p>
+          </>
+        )}
+        {trip.day5 && (
+          <>
+            <div className="dayX">Day 5</div>
+            <p>{trip.day5}</p>
+          </>
+        )}
       </div>
     </div>
   );
 };
 
 export default Details;
-
-
-
