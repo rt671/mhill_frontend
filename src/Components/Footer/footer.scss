@@ -82,6 +82,7 @@
             .inputDiv {
                 width: 100%;
                 gap: 1rem;
+                border: 50px solid black;
                 flex-direction: column;
 
                 input {
@@ -102,11 +103,12 @@
                 }
 
                 .btn {
+                    padding-top: 0.5rem;
                     width: 100%;
                     justify-content: center;
                     color: var(--whiteColor);
                     font-weight: 500;
-                    gap: .5rem;
+                    // gap: .5rem;
 
                     .icon {
                         font-size: 18px;
@@ -308,6 +310,9 @@
                 }
             }
         }
+        // .inputDiv {
+        //     align-items: center;
+        // }
     }
 }
 

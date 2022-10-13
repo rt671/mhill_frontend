@@ -16,7 +16,6 @@
 .main {
   width: 100%;
 }
-
 .main .secTitle .title {
   position: relative;
   width: -webkit-max-content;
@@ -26,7 +25,6 @@
   margin: 1rem 0;
   z-index: 2;
 }
-
 .main .secTitle .title::after {
   position: absolute;
   content: "";
@@ -37,7 +35,6 @@
   bottom: 5px;
   z-index: -1;
 }
-
 .main .secContent {
   justify-content: center;
   gap: 1.5rem;
@@ -130,11 +127,6 @@
   font-size: 13.5px;
   color: var(--textColor);
   font-weight: 500;
-  overflow:hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  -webkit-box-orient: vertical;
 }
 
 .main .secContent .singleDestination .cardInfo .desc p{
