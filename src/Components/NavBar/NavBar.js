@@ -35,13 +35,10 @@ const NavBar = () => {
                 <Link className="navLink link" to="/packages">Packages</Link>
               </li>
               <li className="navItem">
-                <a href="#" className="navLink">About</a>
-              </li>
-              <li className="navItem">
                 <a href="#" className="navLink">Pages</a>
               </li>
               <li className="navItem">
-                <a href="#" className="navLink">Contact</a>
+                <Link className="navLink link" to="/contact">Contact</Link>
               </li>
             
             <button className="btn">

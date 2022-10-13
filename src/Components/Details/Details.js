@@ -47,9 +47,27 @@ const Details = () => {
           Price: ₹<b>{trip.price}</b>
         </div>
       </div>
-      <p className="singleTripDesc">{trip.desc}</p>
+      <div className="singleTripDesc">
+        {trip.desc.map((para) => {
+            return (<p className="intro">{para}</p>)
+        })
+        }
+        {trip.day1 && (<><div className="dayX">Day 1</div>
+        <p>{trip.day1}</p></>)}
+        {trip.day2 && (<><div className="dayX">Day 2</div>
+        <p>{trip.day2}</p></>)}
+        {trip.day3 && (<><div className="dayX">Day 3</div>
+        <p>{trip.day3}</p></>)}
+        {trip.day4 && (<><div className="dayX">Day 4</div>
+        <p>{trip.day4}</p></>)}
+        {trip.day5 && (<><div className="dayX">Day 5</div>
+        <p>{trip.day5}</p></>)}
+      </div>
     </div>
   );
 };
 
 export default Details;
+
+
+
