@@ -56,11 +56,10 @@
     padding:50px 100px;
     line-height: 25px;
   }
-  
-  .singleTripDesc .intro::first-letter {
-    margin-left: 20px;
-    font-size: 30px;
-    font-weight: 600;
+
+
+  .singleTripDesc p {
+    padding:0 1rem 1rem 1rem;
   }
   
   .singleTripDesc .dayX{
