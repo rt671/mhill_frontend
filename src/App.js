@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home";
 import Footer from "./Components/Footer/Footer";
 import Package from "./Components/Package/Package";
 import Details from "./Components/Details/Details";
+import Contact from "./Components/Contact/Contact";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
         />
         <Route path="/packages" element={<Package />}></Route>
         <Route path="/trips/:id" element={<Details />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>

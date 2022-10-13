@@ -34,18 +34,19 @@ const NavBar = () => {
               <li className="navItem">
                 <Link className="navLink link" to="/packages">Packages</Link>
               </li>
-              <li className="navItem">
+              {/* <li className="navItem">
                 <a href="#" className="navLink">About</a>
-              </li>
+              </li> */}
               <li className="navItem">
                 <a href="#" className="navLink">Pages</a>
               </li>
               <li className="navItem">
-                <a href="#" className="navLink">Contact</a>
+                <Link className="navLink link" to="/contact">Contact</Link>
+                {/* <a href="#" className="navLink">Contact</a> */}
               </li>
             
             <button className="btn">
-                <a href="#">BOOK NOW</a>
+                <a href="mailto:vaibhav.fulara123@gmail.com">BOOK NOW</a>
             </button>
 
             </ul>

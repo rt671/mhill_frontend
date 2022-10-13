@@ -76,7 +76,6 @@
 .footer .secContent .contactDiv .inputDiv {
   width: 100%;
   gap: 1rem;
-  border: 50px solid black;
   flex-direction: column;
 }
 .footer .secContent .contactDiv .inputDiv input {
