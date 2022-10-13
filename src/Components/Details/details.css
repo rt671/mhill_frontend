@@ -57,12 +57,21 @@
     line-height: 25px;
   }
   
-  .singleTripDesc::first-letter {
+  .singleTripDesc .intro::first-letter {
     margin-left: 20px;
     font-size: 30px;
     font-weight: 600;
   }
   
+  .singleTripDesc .dayX{
+    padding:20px;
+    color:var(--PrimaryColor);
+    text-shadow: 1px 1px black;
+    font-size:30px;
+    margin-top:2.5rem;
+    font-weight:bold;
+    font-family: "Poppins", sans-serif;
+  }
 /* owl carusel */
 .owl-buttons {
   display: none;

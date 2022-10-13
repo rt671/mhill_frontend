@@ -25,8 +25,8 @@ const App = () => {
           }
         />
         <Route path="/packages" element={<Package />}></Route>
-        <Route path="/trips/:id" element={<Details />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/trips/:id" element={<Details />}></Route> 
+        <Route path="/contact" element={<Contact/>}></Route>
       </Routes>
       <Footer />
     </Router>

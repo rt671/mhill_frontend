@@ -22,10 +22,10 @@ const contactUs = () => {
                         <br />
                         <p>
                             <strong>Phone: +91 94129 66171</strong>
-                            {/* <br />
+                            <br />
                             <strong>Phone: +91 63968 89138</strong>
                             <br />
-                            <strong>Phone: +91 91197 60282</strong> */}
+                            <strong>Phone: +91 91197 60282</strong>
                         </p>
                     </address>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo eos sed, a sint soluta quidem ipsam quis eligendi temporibus aspernatur aut veritatis consequatur recusandae voluptatem culpa libero aliquam omnis provident excepturi fugiat enim asperiores quaerat ab. Atque vel maxime corrupti tenetur sapiente, amet quod quam et tempora deleniti odit in, laudantium, aspernatur repudiandae? Magni officia aut, harum sapiente reiciendis vitae, numquam, soluta accusantium delectus inventore laborum quas iure? Dolorem unde dolore maiores esse nobis, consectetur laborum eum quibusdam odio vero soluta illo eaque magni amet explicabo? Eius aperiam accusantium accusamus sed nihil praesentium mollitia impedit. Quam ad vel quia dicta.</p>
