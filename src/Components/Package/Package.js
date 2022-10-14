@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./package.css";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
-import Card from "../Card/Card";
+import Card from "../Cards/Cards";
 
 const Package = () => {
   const location = useLocation();

@@ -4,7 +4,7 @@ import {
     HiOutlineLocationMarker,
   } from "react-icons/hi";
 import { Link } from "react-router-dom";
-import "./card.css";
+import "./cards.css";
 
 const card = ({trips}) => {
   return (

@@ -3,7 +3,7 @@ import "./main.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import axios from "axios";
-import Card from "../Card/Card";
+import Card from "../Cards/Cards";
 
 const Main = () => {
   const [trips, setTrips] = useState([]);
