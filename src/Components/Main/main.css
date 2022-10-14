@@ -79,9 +79,16 @@
 .main .secContent .singleDestination .cardInfo .titles {
   margin-left:12px;
 }
+.main .secContent .singleDestination .cardInfo .titles .tseasons {
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .main .secContent .singleDestination .cardInfo .destTitle {
   color: var(--blackColor);
   font-size: 1.5rem;
+  font-weight: 800;
 }
 .main .secContent .singleDestination .cardInfo .continent {
   gap: 0.5rem;

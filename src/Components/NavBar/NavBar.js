@@ -32,7 +32,13 @@ const NavBar = () => {
                 <Link className="navLink link" to="/">Home</Link>
               </li>
               <li className="navItem">
-                <Link className="navLink link" to="/packages">Packages</Link>
+                <Link className="navLink link" to="/packages/summer">Summer</Link>
+              </li>
+              <li className="navItem">
+                <Link className="navLink link" to="/packages/winter">Winter</Link>
+              </li>
+              <li className="navItem">
+                <Link className="navLink link" to="/packages/expeditions">Expeditions</Link>
               </li>
               <li className="navItem">
                 <a href="#" className="navLink">Pages</a>
@@ -40,9 +46,8 @@ const NavBar = () => {
               <li className="navItem">
                 <Link className="navLink link" to="/contact">Contact</Link>
               </li>
-            <button className="btn">
-                <a href="mailto:vaibhav.fulara123@gmail.com">BOOK NOW</a>
-            </button>
+              <a href="mailto:vaibhav.fulara123@gmail.com"><button className="btn">BOOK NOW
+            </button></a>
 
             </ul>
             

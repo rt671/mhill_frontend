@@ -3,19 +3,22 @@ import './package.css';
 import axios from 'axios';
 import { HiOutlineClipboardCheck, HiOutlineLocationMarker } from "react-icons/hi";
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Package = () => {
+    const location = useLocation();
+    const path = location.pathname.split("/")[2];
     const [trips, setTrips] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/trips/all/")
+        axios.get("http://localhost:5000/trips/seasons/" + path)
         .then(res => 
             {
                 console.log(res.data);
                 setTrips(res.data);
             })
         .catch(err => console.log(err)); 
-    }, []);
+    }, [path]);
 
     return (
         <section className="package container section">

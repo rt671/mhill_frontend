@@ -15,7 +15,7 @@ const Details = () => {
     photo: "",
     price: "",
     duration: "",
-    months: "",
+    seasons: "",
     desc: [],
     days:[],
     mostVis: "",
