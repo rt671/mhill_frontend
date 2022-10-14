@@ -46,8 +46,9 @@ const NavBar = () => {
               <li className="navItem">
                 <Link className="navLink link" to="/contact">Contact</Link>
               </li>
-              <a href="mailto:vaibhav.fulara123@gmail.com"><button className="btn">BOOK NOW
-            </button></a>
+            <button className="btn">
+                <a href="mailto:vaibhav.fulara123@gmail.com">BOOK NOW</a>
+            </button>
 
             </ul>
             
