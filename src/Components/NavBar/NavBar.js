@@ -22,7 +22,7 @@ const NavBar = () => {
           <div className="logoDiv">
             <a href="#" className="logo flex">
             <img src={logo} className="icon" />
-              <h1>M Hill Adventures.</h1>
+              <h1>M Hill Adventure.</h1>
             </a>
           </div>
 
@@ -41,7 +41,7 @@ const NavBar = () => {
                 <Link className="navLink link" to="/contact">Contact</Link>
               </li>
             <button className="btn">
-                <a href="mailto:vaibhav.fulara123@gmail.com">BOOK NOW</a>
+                <a href="https://wa.me/919119760282" target="_blank">BOOK NOW</a>
             </button>
 
             </ul>

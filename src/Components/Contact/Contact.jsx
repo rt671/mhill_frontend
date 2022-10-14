@@ -2,82 +2,99 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { contactConfig } from "./content_option"
 import './Contact.css'
+import 'bootstrap/dist/css/bootstrap.css';
 
 export default function ContactUs() {
   
 
   return (
-      <Container>
-     
-        <Row className="mb-5 mt-3">
-          <Col lg="8">
-            <h1 className="display-4 mb-4">Contact Me</h1>
-            <hr className="t_border my-4 ml-0 text-left" />
-          </Col>
-        </Row>
-        <Row className="sec_sp">
-          <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
-            <address>
-              <strong>Email:</strong>{" "}
-              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
-                {contactConfig.YOUR_EMAIL}
-              </a>
-              <br />
-              <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
-                <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
-                </p>
-              ) : (
-                ""
-              )}
-            </address>
-            <p>{contactConfig.description}</p>
-          </Col>
-          <Col lg="7" className="d-flex align-items-center">
-            <form  className="contact__form w-100">
-              <Row>
-                <Col lg="6" className="form-group">
-                  <input
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    placeholder="Name" 
-                    type="text"
-                    required 
-                  />
-                </Col>
-                <Col lg="6" className="form-group">
-                  <input
-                    className="form-control rounded-0"
-                    id="email"
-                    name="email"
-                    placeholder="Email"
-                    type="email" 
-                    required 
-                  />
-                </Col>
-              </Row>
-              <textarea
-                className="form-control rounded-0"
-                id="message"
-                name="message"
-                placeholder="Message"
-                rows="5" 
-                required
-              ></textarea>
-              <br />
-              <Row>
-                <Col lg="12" className="form-group">
-                  <button className="btn ac_btn" type="submit"> 
-                  Send
-                  </button>
-                </Col>
-              </Row>
+    <div className="contact3 py-5">
+    <div class="row no-gutters">
+    <div class="container">
+        <div class="row">
+        <div class="col-lg-6">
+            <div class="card-shadow">
+            <img src="../Assets/customer_care.jpg" />
+            </div>
+        </div>
+        <div classname="col-lg-6">
+            <div class="contact-box ml-3">
+            <h1 class="font-weight-light mt-2">Quick Contact</h1>
+            <form class="mt-4">
+                <div class="row">
+                <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                    <input class="form-control" type="text" placeholder="name" />
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                    <input class="form-control" type="email" placeholder="email address" />
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                    <input class="form-control" type="text" placeholder="phone" />
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="form-group mt-2">
+                    <textarea class="form-control" rows="3" placeholder="message"></textarea>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <button type="submit" class="btn btn-danger-gradiant mt-3 text-white border-0 px-3 py-2"><span> SUBMIT</span></button>
+                </div>
+                </div>
             </form>
-          </Col>
-        </Row>
-      </Container>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="card mt-4 border-0 mb-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-4">
+                <div class="card-body d-flex align-items-center c-detail pl-0">
+                    <div class="mr-3 align-self-center">
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon1.png" />
+                    </div>
+                    <div class="">
+                    <h6 class="font-weight-medium">Address</h6>
+                    <p class="">601 Sherwood Ave.
+                        <br /> San Bernandino</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                <div class="card-body d-flex align-items-center c-detail">
+                    <div class="mr-3 align-self-center">
+                    <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon2.png" />
+                    </div>
+                    <div class="">
+                    <h6 class="font-weight-medium">Phone</h6>
+                    <p class="">+91 94129 66171
+                        <br /> +91 63968 89138</p>
+                    </div>
+                </div>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                  <div class="card-body d-flex align-items-center c-detail">
+                      <div class="mr-3 align-self-center">
+                      <img src="https://www.wrappixel.com/demos/ui-kit/wrapkit/assets/images/contact/icon3.png" />
+                      </div>
+                      <div class="">
+                      <h6 class="font-weight-medium">Email</h6>
+                      <p class="">
+                          mhilladventure@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   );
 }

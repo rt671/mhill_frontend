@@ -79,12 +79,8 @@
 }
 
 @media screen and (min-width: 500px) {
-  .home .homeContent .textDiv .smallText {
-    font-size: 24px;
-  }
   .home .homeContent .textDiv .homeTitle {
     position: relative;
-    font-size: 3rem;
     width: 100%;
   }
 }
@@ -93,10 +89,22 @@
     padding: 2rem 1rem;
     grid-template-columns: repeat(3, 1fr);
   }
+  .home .homeContent .textDiv .smallText {
+    font-size: 25px;
+  }
+  .home .homeContent .textDiv .homeTitle {
+    font-size: 3.5rem;
+  }
 }
 @media screen and (min-width: 940px) {
   .home {
     height: 70vh;
+  }
+  .home .homeContent .textDiv .smallText {
+    font-size: 30px;
+  }
+  .home .homeContent .textDiv .homeTitle {
+    font-size: 4rem;
   }
 }
 @media screen and (min-width: 1240px) {

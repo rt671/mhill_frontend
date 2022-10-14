@@ -31,7 +31,7 @@ const Home = () => {
                     </span>
 
                     <h1 data-aos="fade-up" className="homeTitle">
-                        M Hill Adventures
+                        M Hill Adventure
                     </h1>
                 </div>
 
