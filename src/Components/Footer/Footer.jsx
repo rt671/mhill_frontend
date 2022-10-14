@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
 
           <div className="inputDiv flex">
-            <input data-aos="fade-up" type="text" placeholder='Enter Your Email Adress!'/>
+            <input data-aos="fade-up" type="text" placeholder='Enter Your Email Address!'/>
             <button data-aos="fade-up" className="btn flex" type="submit">
               SEND <FiSend className="icon"/>
             </button>

@@ -122,6 +122,8 @@
 }
 .footer .secContent .contactDiv .inputDiv .btn .icon {
   font-size: 18px;
+  color:white;
+  margin-left:10px;
 }
 .footer .secContent .footerCard {
   position: relative;
