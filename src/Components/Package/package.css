@@ -31,7 +31,7 @@
     z-index: 2;
   }
   
-  .package .secTitle .title::after {
+  /* .package .secTitle .title::after {
     position: absolute;
     content: "";
     background: var(--SecondaryColor);
@@ -40,7 +40,7 @@
     right: 0;
     bottom: 5px;
     z-index: -1;
-  }
+  } */
   
   .package .secContent {
     justify-content: center;

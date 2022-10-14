@@ -1,10 +1,10 @@
 import React, {useEffect} from "react";
 import './footer.css'
-import video2 from '../../Assets/video2.mp4'
+import video2 from '../../Assets/video.mp4'
 import { FiSend, FiChevronRight } from "react-icons/fi";
-import { MdOutlineTravelExplore } from "react-icons/md";
 import { AiOutlineTwitter, AiFillYoutube, AiFillInstagram } from "react-icons/ai"
 import { FaTripadvisor } from "react-icons/fa"
+import logo from '../../Assets/logo.png'
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -41,7 +41,8 @@ const Footer = () => {
           <div className="footerIntro flex">
             <div className="logoDiv">
               <a href="#" className="logo flex">
-                <MdOutlineTravelExplore className="icon"/> Mhill Travels.
+                <img src= {logo} className="icon"/>
+                Mhill Travels.
               </a>
             </div>
 
