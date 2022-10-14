@@ -54,6 +54,8 @@ const Details = () => {
       <div className="singleTripInfo">
         <div className="singleTripInfoDiv">
           Duration: <b>{trip.duration}</b>
+          <span>, </span>
+          <span className="singleTripInfoSeason">{trip.seasons.toUpperCase()}</span>
         </div>
         <div className="singleTripInfoDiv">
           Price: ₹<b>{trip.price}</b>
@@ -63,8 +65,6 @@ const Details = () => {
         {trip.desc.map((para) => {
           return (<p className="intro">{para}</p>);
         })}
-        {/* {console.log(trip.desc[2])} */}
-        {/* <p>{trip.desc[2]}</p> */}
         {
           trip.days.map((day) => {
             i=i+1;
