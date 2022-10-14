@@ -1,0 +1,174 @@
+.secContent {
+  justify-content: center;
+  gap: 1.5rem;
+}
+.singleDestination {
+  height: 100%;
+  display: grid;
+  row-gap: 10px;
+  border-radius: 10px;
+  align-items: center;
+  background: var(--cardBG);
+  box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+  overflow: hidden;
+}
+.singleDestination:hover {
+  background: var(--cardHover);
+  box-shadow: 1 4px 4px rgba(85, 85, 114, 0.549);
+  transition: 0.3s ease;
+}
+.imageDiv {
+  height: 180px;
+  width: 100%;
+  overflow: hidden;
+}
+.imageDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  transition: 2s ease;
+}
+.imageDiv:hover img {
+  transform: scale(1.1);
+}
+.cardInfo {
+  padding: 1rem;
+}
+
+.cardInfo .titles {
+  margin-left: 12px;
+}
+.cardInfo .titles .tseasons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardInfo .destTitle {
+  color: var(--blackColor);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.cardInfo .continent {
+  gap: 0.5rem;
+}
+.cardInfo .continent .icon {
+  color: var(--textColor);
+  font-size: 18px;
+}
+.cardInfo .continent .name {
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 14px;
+}
+.cardInfo .fees {
+  width: 100%;
+  /* flex-direction:column; */
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-top: 1.5px solid var(--greyText);
+  border-bottom: 1.5px solid var(--greyText);
+}
+.cardInfo .fees .grade {
+  color: var(--textColor);
+  max-width: 100px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+}
+.cardInfo .fees .grade small {
+  background: var(--gradientColor);
+  border-radius: 1rem;
+  color: var(--whiteColor);
+  padding: 1px 10px;
+  font-size: 10px;
+}
+.cardInfo .fees .duration {
+  font-size: 1.25rem;
+  color: var(--blackColor);
+}
+.cardInfo .fees .price {
+  font-size: 1.25rem;
+  color: var(--blackColor);
+}
+.cardInfo .desc {
+  font-size: 13.5px;
+  color: var(--textColor);
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.cardInfo .desc p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.cardInfo .desc {
+  padding-left: 15px;
+}
+.cardInfo .desc .btn {
+  margin-top: 1rem;
+  color: var(--whiteColor);
+  font-weight: 600;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-left: -2px;
+}
+.cardInfo .desc .btn .icon {
+  align-self: center;
+  font-size: 18px;
+}
+
+@media screen and (min-width: 500px) {
+  .title {
+    font-size: 1.5rem;
+  }
+  .title::after {
+    width: 155px !important;
+  }
+  .secContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+}
+@media screen and (min-width: 840px) {
+  .secContent {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .secContent .singleDestination {
+    height: auto;
+  }
+} /*# sourceMappingURL=main.css.map */
+
+@media screen and (max-width: 1000px) {
+  .cardInfo .titles .tseasons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cardInfo .fees {
+    flex-direction: column;
+  }
+
+  .cardInfo .desc {
+    text-align: center;
+  }
+
+  .cardInfo .desc .btn {
+    margin: auto;
+    margin-top: 20px;
+  }
+}
