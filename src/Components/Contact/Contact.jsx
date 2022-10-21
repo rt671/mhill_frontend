@@ -18,7 +18,7 @@ export default function ContactUs() {
           <span className="circle two"></span>
 
           <form action="Contact.jsx" autoComplete="off">
-            <h3 className="title">Contact us</h3>
+            <h3 className="heading">Contact us</h3>
             <div className="input-container">
               <input type="text" name="name" className="input" />
               <label htmlFor="">Username</label>
