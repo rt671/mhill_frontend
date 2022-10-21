@@ -1,43 +1,51 @@
 import React from "react"; 
 import { Container, Row, Col } from "react-bootstrap";
 import { contactConfig } from "./content_option"
-import './Contact.css'
+import './contact.css'
 // import 'bootstrap/dist/css/bootstrap.css';
 
 export default function ContactUs() {
   
-
   return (
     <section className="contact">
-      <div className="content">
-        <h2>Contact Us</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit omnis impedit atque iure dolor libero iste rem, aspernatur nemo soluta aliquam amet molestiae! Molestias provident deleniti numquam neque porro laborum?</p>
-      </div>
-      <div className="contained">
-        <div className="contactInfo">
-          <div className="box">
-            <div className="icon"></div>
-            <div className="text">
-              <h3>Adress</h3>
-              <p>Uttarakhand, <br>India</br></p>
+
+      <div className="form">
+        <div className="contact-info">
+          
+        </div>
+        <div className="contact-form">
+          <span className="circle one"></span>
+          <span className="circle two"></span>
+
+          <form action="Contact.jsx" autoComplete="off">
+            <h3 className="title">Contact us</h3>
+            <div className="input-container">
+              <input type="text" name="name" className="input" />
+              <label htmlFor="">Username</label>
+              <span>Username</span>
             </div>
-          </div>
-          <div className="box">
-            <div className="icon"></div>
-            <div className="text">
-              <h3>Phone</h3>
-              <p>+91 82876 33775</p>
+            <div className="input-container">
+              <input type="email" name="email" className="input" />
+              <label htmlFor="">Email</label>
+              <span>Email</span>
             </div>
-          </div>
-          <div className="box">
-            <div className="icon"></div>
-            <div className="text">
-              <h3>Email</h3>
-              <p>mhilladventure@gmail.com</p>
+            <div className="input-container">
+              <input type= "tel" name="phone" className="input" />
+              <label htmlFor="">Phone No.</label>
+              <span>Phone</span>
             </div>
-          </div>
+            <div className="input-container textarea">
+              <textarea name="message" className="input"></textarea>
+              <label htmlFor="">Message</label>
+              <span>Message</span>
+            </div>
+            <input type="submit" value="Send" className="butn"/>
+          </form>
         </div>
       </div>
+
+      <script src="hover.js"></script>
+
     </section>
   );
 }
