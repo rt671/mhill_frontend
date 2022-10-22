@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md"
 import { AiOutlineTwitter, AiFillYoutube, AiFillFacebook, AiFillInstagram} from "react-icons/ai"
 import {FaTripadvisor, FaTwitter} from "react-icons/fa"
+import axios from "axios";
 import './contact.css'
 
 export default function ContactUs() {
@@ -25,6 +26,13 @@ export default function ContactUs() {
         input.addEventListener("blur", blurFunc);
     });
   }, []);
+
+  const postContactInfo = () => {
+    console.log("Posting contact info to backend")
+    axios.post("http://localhost:5000/trips/contact")
+    .then(res => console.log("Message and Contact info sent!"))
+    .catch(err=> console.log(err));
+  }
 
   return (
     <section className="contact">
@@ -87,7 +95,7 @@ export default function ContactUs() {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form method ="POST" action="mailto:rudrakshsuper2001@gmail.com" autoComplete="off">
+          <form autoComplete="off" method="POST" action="mailto:mhilladventure@gmail.com">
             <h3 className="heading">Contact us</h3>
             <div className="input-container">
               <input type="text" name="name" className="input" />
@@ -109,7 +117,7 @@ export default function ContactUs() {
               <label htmlFor="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="butn"/>
+             <input type="submit" value="Send"  className="butn"/> {/*onClick={postContactInfo} */}
           </form>
         </div>
       </div>
