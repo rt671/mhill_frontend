@@ -42,6 +42,7 @@ body, input, textarea {
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: auto;
 }
 
 .contact-form {
@@ -206,4 +207,84 @@ textarea.input {
 .input-container.focus span:after {
   width: 50%;
   opacity: 1;
+}
+
+.contact-info {
+  padding: 2.3rem 2.3rem;
+  position: relative;
+}
+
+.contact-info .title {
+  color: #1abc9c;
+}
+
+.conicon {
+  width: 28px;
+  height: 20px;
+  margin-right: 0.7rem;
+}
+
+.text {
+  color: #333;
+  margin: 1.5rem 0 2rem 0;
+}
+
+.information {
+  display: flex;
+  color: #555;
+  margin: 0.7rem 0;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.social-media a{
+  color: var(--blackColor);
+  font-size: 20px;
+  margin-right: 0.3rem;
+}
+
+.social-media a:hover{
+  color: var(--PrimaryColor);
+  transform: scale(1.05);
+}
+
+@media (max-width: 750px) {
+  .form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info:before {
+    bottom: initial;
+    top: -75px;
+    right: 65px;
+    transform: scale(0.95);
+  }
+
+  .contact-form:before {
+    top: -13px;
+    left: initial;
+    right: 75vw;
+  }
+
+  .text {
+    margin: 1rem 0 1.5rem 0;;
+  }
+
+  .social-media {
+    padding: 1.5rem 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .contact-info:before {
+    display: none;
+  }
+
+  form, .contact-info {
+    padding: 1.7rem 1.6rem;
+  }
 }

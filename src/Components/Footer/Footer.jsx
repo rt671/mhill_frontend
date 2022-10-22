@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import './footer.css'
 import video2 from '../../Assets/video.mp4'
 import { FiSend, FiChevronRight } from "react-icons/fi";
-import { AiOutlineTwitter, AiFillYoutube, AiFillInstagram } from "react-icons/ai"
+import { AiOutlineTwitter, AiFillYoutube, AiFillInstagram, AiFillFacebook} from "react-icons/ai"
 import { FaTripadvisor } from "react-icons/fa"
 import logo from '../../Assets/logo.png'
 
@@ -56,6 +56,7 @@ const Footer = () => {
             <div data-aos="fade-up" className="footerSocials">
               <AiOutlineTwitter className="icon"/>
               <AiFillYoutube className="icon"/>
+              <AiFillFacebook className="icon" />
               <AiFillInstagram className="icon"/>
               <FaTripadvisor className="icon"/>
             </div>
