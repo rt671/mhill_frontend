@@ -114,7 +114,10 @@ form {
   border-radius: 25px;
   transition: 0.3s;
 }
-
+.input::placeholder{
+  color:white;
+  font-size: 0.8rem;
+}
 textarea.input {
   padding: 0.8rem 1.2rem;
   min-height: 150px;
