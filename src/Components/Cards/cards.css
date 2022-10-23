@@ -44,6 +44,7 @@
   color: var(--blackColor);
   font-size: 1.5rem;
   font-weight: 800;
+  height:4.6rem;
 }
 .continent {
   gap: 0.5rem;
@@ -141,7 +142,8 @@
     height: auto;
   }
 }
-@media screen and (min-width: 840px) {
+
+@media screen and (min-width: 1000px) {
   .secContent {
     grid-template-columns: repeat(3, 1fr);
   }

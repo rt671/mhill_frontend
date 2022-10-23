@@ -1,11 +1,39 @@
-import React from "react"; 
-import { contactConfig } from "./content_option"
+import React, { useEffect } from "react"; 
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md"
 import { AiOutlineTwitter, AiFillYoutube, AiFillFacebook, AiFillInstagram} from "react-icons/ai"
 import {FaTripadvisor, FaTwitter} from "react-icons/fa"
+import axios from "axios";
 import './contact.css'
 
 export default function ContactUs() {
+  useEffect(() => {
+    const inputs = document.querySelectorAll(".input");
+
+    function focusFunc() {
+        let parent = this.parentNode;
+        parent.classList.add("focus");
+    }
+
+    function blurFunc() {
+        let parent = this.parentNode;
+        if(this.value == "") {
+            parent.classList.remove("focus");
+        }
+    }
+
+    inputs.forEach((input) => {
+        input.addEventListener("focus", focusFunc);
+        input.addEventListener("blur", blurFunc);
+    });
+  }, []);
+
+  const postContactInfo = () => {
+    console.log("Posting contact info to backend")
+    axios.post("http://localhost:5000/trips/contact")
+    .then(res => console.log("Message and Contact info sent!"))
+    .catch(err=> console.log(err));
+  }
+
   return (
     <section className="contact">
 
@@ -67,7 +95,7 @@ export default function ContactUs() {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form action="Contact.jsx" autoComplete="off">
+          <form autoComplete="off" method="POST" action="mailto:mhilladventure@gmail.com">
             <h3 className="heading">Contact us</h3>
             <div className="input-container">
               <input type="text" name="name" className="input" />
@@ -81,7 +109,7 @@ export default function ContactUs() {
             </div>
             <div className="input-container">
               <input type= "tel" name="phone" className="input" />
-              <label htmlFor="">Phone No.</label>
+              <label htmlFor="">Phone</label>
               <span>Phone</span>
             </div>
             <div className="input-container textarea">
@@ -89,7 +117,7 @@ export default function ContactUs() {
               <label htmlFor="">Message</label>
               <span>Message</span>
             </div>
-            <input type="submit" value="Send" className="butn"/>
+             <input type="submit" value="Send"  className="butn"/> {/*onClick={postContactInfo} */}
           </form>
         </div>
       </div>
