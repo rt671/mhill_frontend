@@ -29,7 +29,7 @@ export default function ContactUs() {
 
   const postContactInfo = () => {
     console.log("Posting contact info to backend")
-    axios.post("http://localhost:5000/trips/contact")
+    axios.post("https://mhill-api.herokuapp.com/trips/contact")
     .then(res => console.log("Message and Contact info sent!"))
     .catch(err=> console.log(err));
   }

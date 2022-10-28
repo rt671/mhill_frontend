@@ -11,7 +11,7 @@ const Package = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/trips/seasons/" + path)
+      .get("https://mhill-api.herokuapp.com/trips/seasons/" + path)
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);
