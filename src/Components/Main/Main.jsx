@@ -23,7 +23,7 @@ const Main = () => {
 
   return (
     <section className="main container section">
-        <h3 data-aos="fade-right" className="title">
+        <h3 data-aos="fade-right" className="titler">
           Most Visited Destinations
         </h3>
       <Card trips={trips}/>
