@@ -34,13 +34,3 @@ const App = () => {
 };
 
 export default App;
-
-
-/*
-MailChimp API key:
-57bd89b9b5ac9ca6df919f40642fb298-us8
-
-MailChimp Audience Key:
-6a25ae1463
-
-*/

@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-.title {
+.titler {
   position: relative;
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -12,3 +12,8 @@
   z-index: 2;
 }
 
+@media screen and (max-width: 500px) {
+  .titler {
+    margin-top: 2rem;
+  }
+}

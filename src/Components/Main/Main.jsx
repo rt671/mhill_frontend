@@ -13,7 +13,7 @@ const Main = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/trips/")
+      .get("https://mhill-api.herokuapp.com/trips/")
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);
@@ -23,7 +23,7 @@ const Main = () => {
 
   return (
     <section className="main container section">
-        <h3 data-aos="fade-right" className="title">
+        <h3 data-aos="fade-right" className="titler">
           Most Visited Destinations
         </h3>
       <Card trips={trips}/>

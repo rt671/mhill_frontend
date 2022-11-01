@@ -5,6 +5,7 @@ import { FiSend, FiChevronRight } from "react-icons/fi";
 import { AiOutlineTwitter, AiFillYoutube, AiFillInstagram, AiFillFacebook} from "react-icons/ai"
 import { FaTripadvisor } from "react-icons/fa"
 import logo from '../../Assets/logo.png'
+import { Link } from "react-router-dom";
 
 import Aos from 'aos'
 import 'aos/dist/aos.css'
@@ -71,12 +72,12 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Hiking Tips
+                <Link className="navLink link" to="/">Hiking Tips</Link>
               </li>
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Tourism
+                <Link className="navLink link" to="/packages/all">Tourism</Link>
               </li>
 
               <li className="footerList flex">
@@ -86,7 +87,7 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Rent Cars
+                <Link className="navLink link" to="/">Rent Cars</Link>
               </li>
 
               <li className="footerList flex">

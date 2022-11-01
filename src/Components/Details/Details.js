@@ -22,7 +22,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/trips/" + path)
+      .get("https://mhill-api.herokuapp.com/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrip(res.data);
