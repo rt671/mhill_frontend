@@ -26,7 +26,7 @@ const NavBar = () => {
             </a>
           </div>
 
-          <div className={active}>
+          <div className={active} onMouseLeave={closeNav}>
             <ul className="navLists flex">
               <li className="navItem">
                 <Link className="navLink link" to="/">Home</Link>
@@ -58,7 +58,7 @@ const NavBar = () => {
             </div>
             </div>
 
-          <div className="openNavBar" onClick={showNav}>
+          <div className="openNavBar" onMouseOver={showNav}>
             <TbDotsVertical className="icon"></TbDotsVertical>
           </div>
       </header>
