@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./details.css";
 import axios from "axios";
-// import ScriptTag from 'react-script-tag';
 
 import React, { useState, useEffect } from "react";
 
@@ -32,9 +31,6 @@ const Details = () => {
       .catch((err) => console.log(err));
   }, [path]);
 
-  // useEffect(() => {
-  //   <ScriptTag type="text/javascript" src="owl.js" />
-  // }, []);
   let i=0;
   return (
     <div className="singleTrip">
