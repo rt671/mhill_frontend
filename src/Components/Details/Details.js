@@ -55,6 +55,12 @@ const Details = () => {
         <div className="singleTripInfoDiv">
           Duration: <b>{trip.duration}</b>
           <span>, </span>
+
+          {
+                (trip.seasons==="summer-and-winter")? (<span className="singleTripInfoSeason">SUMMER/WINTER</span>):
+                (<span className="singleTripInfoSeason">{trip.seasons.toUpperCase()}</span>)
+          }
+
           <span className="singleTripInfoSeason">{trip.seasons.toUpperCase()}</span>
         </div>
         <div className="singleTripInfoDiv">
@@ -70,9 +76,12 @@ const Details = () => {
             i=i+1;
             return (
               <>
-               <div className="dayX">{"Day " + i}</div>
+              <div className="dayTitle">
+               <span className="dayX">{"Day " + i}</span> 
+               <span className="headX">{trip.head[i-1]}</span>
+              </div>
                <p>{day}</p>
-              </>
+              </>
             )
           })
         }

@@ -76,6 +76,21 @@
     font-family: "Poppins", sans-serif;
   }
 
+  .singleTripDesc .dayX, .headX{
+    padding:20px;
+    color:var(--PrimaryColor);
+    text-shadow: 1px 1px black;
+    font-size:30px;
+    margin-top:2.5rem;
+    font-weight:bold;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .dayTitle{
+    margin-top:2rem;
+    margin-bottom:0.5rem;
+  }
+
   @media screen and (max-width:1100px){
     .singleTripDesc{
       padding: 50px 60px;
