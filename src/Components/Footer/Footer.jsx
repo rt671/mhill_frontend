@@ -65,7 +65,7 @@ const Footer = () => {
           
           {/* Group A */}
           <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks grid">
-            <div className="linkGroup">
+            <div className="linkGroup" id="padGroup1">
               <span className="groupTitle">
                 OUR ORGANIZATION
               </span>
@@ -80,12 +80,27 @@ const Footer = () => {
                 <Link className="navLink link" to="/packages/all">Tourism</Link>
               </li>
 
-              <li className="footerList flex">
+              {/* <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Payment
+              </li> */}
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                <Link className="navLink link" to="/packages/summer">Summer Trips</Link>
               </li>
 
               <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                <Link className="navLink link" to="/packages/winter">Winter Trips</Link>
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                <Link className="navLink link" to="/packages/expeditions">Expeditions</Link>
+              </li>
+
+              {/* <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 <Link className="navLink link" to="/">Rent Cars</Link>
               </li>
@@ -98,14 +113,14 @@ const Footer = () => {
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Trip Advisor
-              </li>
+              </li>  */}
 
             </div>
           </div>
 
           {/* Group B */}
           <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks grid">
-            <div className="linkGroup">
+            <div className="linkGroup" id="padGroup2">
               <span className="groupTitle">
                 LAST MINUTE
               </span>
