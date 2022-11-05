@@ -61,7 +61,6 @@ const Details = () => {
                 (<span className="singleTripInfoSeason">{trip.seasons.toUpperCase()}</span>)
           }
 
-          <span className="singleTripInfoSeason">{trip.seasons.toUpperCase()}</span>
         </div>
         <div className="singleTripInfoDiv">
           Price: ₹<b>{trip.price}</b>

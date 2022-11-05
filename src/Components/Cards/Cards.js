@@ -34,7 +34,6 @@ const card = ({ trips }) => {
                 (<span className="season">{trip.seasons.toUpperCase()}</span>)
                 }
                 
-                <span className="season">{trip.seasons.toUpperCase()}</span>
                 </div>
               </div>
 

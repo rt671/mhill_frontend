@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
           
           {/* Group A */}
-          <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks grid">
+          <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks grid smolGrid">
             <div className="linkGroup" id="padGroup1">
               <span className="groupTitle">
                 OUR ORGANIZATION
@@ -119,12 +119,17 @@ const Footer = () => {
           </div>
 
           {/* Group B */}
-          <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks grid">
+          <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks grid smolGrid">
             <div className="linkGroup" id="padGroup2">
               <span className="groupTitle">
                 LAST MINUTE
               </span>
 
+              <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                Contact Us
+              </li>
+              
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Satopanth & Swargarohini

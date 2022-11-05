@@ -245,6 +245,7 @@
     margin-top: 1rem;
   }
 }
+
 @media screen and (min-width: 600px) {
   .footer .secContent .contactDiv {
     flex-direction: row;
@@ -266,6 +267,7 @@
     width: max-content;
   }
 }
+
 @media screen and (min-width: 840px) {
   .footer {
     padding: 5rem 0;
@@ -276,9 +278,13 @@
   }
   #padGroup1 {
     width: 120px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
   }
   #padGroup2 {
     width: 150px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
   }
   .footer .secContent .footerCard .footerLinks {
     grid-template-columns: repeat(3, 1fr);
@@ -288,6 +294,7 @@
     margin-top: 0rem;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .footer .secContent .footerCard {
     padding: 1rem 1rem;
@@ -322,6 +329,7 @@
     width: 250px;
   }
 }
+
 @media screen and (min-width: 1500px) {
   .footer .secContent .footerCard {
     width : 60vw;
