@@ -48,10 +48,7 @@ const Footer = () => {
             </div>
 
             <div data-aos="fade-up" className="footerParagraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Sint, aspernatur, laudantium similique minima corrupti id et dolor 
-              laborum totam incidunt nobis sequi, nulla distinctio cumque
-               unde aliquid eum ipsa reprehenderit?
+            Being in the tourism business since 1994, M Hill Adventure has proven to be pivotal in delivering picturesque sightseeing experiences to its customers in the most affordable way. We provide group and individual tours in and across Uttarakhand.
             </div>
 
             <div data-aos="fade-up" className="footerSocials">
