@@ -157,6 +157,7 @@
   font-size: 13px;
   margin-left: 10px;
   color: var(--textColor);
+  text-align: justify;
 }
 .footer .secContent .footerCard .footerSocials {
   margin-left: 10px;

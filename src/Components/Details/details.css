@@ -1,138 +1,147 @@
-.singleTrip {
+.trip {
   padding-top:135px;
+  flex: 9;
 }
 
-.singleTrip {
-    flex: 9;
-  }
-  
-  .singleTripWrapper {
-    padding: 20px;
-    padding-right: 0;
-    display:flex;
-    flex-direction: column;
-  }
-  
-  .singleTripImg {
-    width: 100%;
-    height: 300px;
-    border-radius: 5px;
-    object-fit: cover;
-  }
-  
-  .singleTripDest {
-    text-align: center;
-    margin: 40px 10px 0 10px;
-    color:var(--PrimaryColor);
-    text-shadow: 1px 1px black;
-    font-size: 45px;
-    font-family: "Poppins", sans-serif;
-  }
+.tripMain {
+  padding: 20px;
+  display:flex;
+  flex-direction: column;
+}
 
-  .singleTripState {
-    text-align: center;
-    margin: 5px 10px;
-    font-size: 25px;
-    color: var(--PrimaryColor);
-    /* text-shadow:1px 1px black; */
-    font-family: "Poppins", sans-serif;
-  }
+.tripImg {
+  width: 100%;
+  height: 362px;
+  border-radius: 5px;
+  object-fit: cover;
+}
 
-  .singleTripInfo {
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 26px;
-    color: var(--textColor);
-    font-family: "Varela Round", Arial, Helvetica, sans-serif;
-  }
-.singleTripInfoSeason{
-  font-weight: 600;
+.tripDest {
+  text-align: center;
+  margin: 36px 10px 0 10px;
   color:var(--PrimaryColor);
+  text-shadow: 1px 1px black;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
 }
-  .singleTripInfoDiv {
-    padding:10px 50px;
-  }
-  .singleTripDesc {
-    color: #666;
-    font-size: 18px;
-    padding:50px 100px;
-    line-height: 25px;
-  }
 
+.tripState {
+  text-align: center;
+  margin: 5px 10px;
+  font-size: 25px;
+  color: var(--PrimaryColor);
+  font-family: "Poppins", sans-serif;
+}
 
-  .singleTripDesc p {
-    padding:0 1rem 1rem 1rem;
-    text-align: justify;
-  }
-  
-  .singleTripDesc .dayX{
-    padding:20px;
-    color:var(--PrimaryColor);
-    text-shadow: 1px 1px black;
-    font-size:30px;
-    margin-top:2.5rem;
-    font-weight:bold;
-    font-family: "Poppins", sans-serif;
-  }
+.tripInfo {
+  padding: 1.5rem 3rem;
+}
 
-  .singleTripDesc .dayX, .headX{
-    padding:20px;
-    color:var(--PrimaryColor);
-    text-shadow: 1px 1px black;
-    font-size:30px;
-    margin-top:2.5rem;
-    font-weight:bold;
-    font-family: "Poppins", sans-serif;
-  }
+.tripMeta {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26px;
+  color: var(--textColor);
+  font-family: "Varela Round", Arial, Helvetica, sans-serif;
+}
 
-  .dayTitle{
-    margin-top:2rem;
-    margin-bottom:0.5rem;
-  }
+.tripSeason{
+font-weight: 600;
+color:var(--PrimaryColor);
+}
 
-  @media screen and (max-width:1100px){
-    .singleTripDesc{
-      padding: 50px 60px;
-      font-size:16px;
-    }
-  } 
-  
-@media screen and (max-width:700px){
-  .singleTripDesc{
-    padding: 50px 40px;
+.tripDesc {
+  color: var(--textColor);
+  font-size: 18px;
+  padding:10px 0;
+  line-height: 28px;
+}
+
+.tripDesc .intro, .details, .points {
+  padding:0 0 1rem 0;
+  text-align: justify;
+}
+
+.tripDesc .dayTitle{
+  color:var(--PrimaryColor);
+  font-size:26px;
+  line-height: 40px;
+  margin-top:2.5rem;
+  margin-bottom: 0.3rem;
+  font-weight:bold;
+  font-family: "Poppins", sans-serif;
+}
+
+.dayTitle .headX
+{
+  padding-left:1rem;
+}
+
+.points {
+  list-style-type: square;
+}
+
+@media screen and (max-width:800px){
+
+  .tripDest{
+    font-size: 35px;
+  }
+  .tripInfo {
+    padding: 1rem 2.5rem;
+  }
+  .tripMeta {
+    font-size: 20px;
+  }
+  .tripDesc {
     font-size:16px;
+    line-height: 24px;
+  }
+
+  .tripDesc .dayTitle {
+    font-size: 21px;
+    padding:10px 0;
+    line-height: 30px;
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 } 
 
+@media screen and (max-width:570px)
+{
+  .tripMeta {
+    flex-direction: column;
+    font-size: 20px;
+  }
+}
 
 /* owl carusel */
 /* .owl-buttons {
-  display: none;
+display: none;
 }
 .owl-carousel:hover .owl-buttons {
-  display: block;
+display: block;
 }
 
 .owl-item {
-  text-align: center;
+text-align: center;
 }
 
 .owl-theme .owl-controls .owl-buttons div {
-  background: transparent;
-  color: #869791;
-  font-size: 40px;
-  line-height: 300px;
-  margin: 0;
-  padding: 0 60px;
-  position: absolute;
-  top: 0;
+background: transparent;
+color: #869791;
+font-size: 40px;
+line-height: 300px;
+margin: 0;
+padding: 0 60px;
+position: absolute;
+top: 0;
 }
 .owl-theme .owl-controls .owl-buttons .owl-prev {
-  left: 0;
-  padding-left: 20px;
+left: 0;
+padding-left: 20px;
 }
 .owl-theme .owl-controls .owl-buttons .owl-next {
-  right: 0;
-  padding-right: 20px;
+right: 0;
+padding-right: 20px;
 } */
