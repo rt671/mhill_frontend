@@ -83,7 +83,7 @@ const Details = () => {
                 {it.detail.map((para) => {
                   return <p className="details">{para}</p>;
                 })}
-                <ul>
+                <ul className="point-list">
                   {it.points.map((pt) => {
                     return <li className="points">{pt}</li>;
                   })}
