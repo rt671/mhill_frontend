@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./Components/Main/Main";
@@ -10,9 +10,16 @@ import Details from "./Components/Details/Details";
 import Contact from "./Components/Contact/Contact";
 
 const App = () => {
+  // const [navBar, setNavBar] = useState('');
+  // const closeNav = () => {
+  //   setNavBar('navBar');
+  //   console.log("Navbar closed!");
+  // }
+
   return (
     <Router>
-      <NavBar />
+      <NavBar />  {/*status={navBar} */}
+      {/* <div className="blocker" onClick={closeNav}></div> */}
       <Routes>
         <Route
           exact

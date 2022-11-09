@@ -20,7 +20,7 @@ const Package = () => {
     }
     else{
     axios
-      .get("https://mhill-api.herokuapp.com/trips/seasons/" + path)
+      .get("http://mhill-api.herokuapp.com/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);
