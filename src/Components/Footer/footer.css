@@ -157,6 +157,7 @@
   font-size: 13px;
   margin-left: 10px;
   color: var(--textColor);
+  text-align: justify;
 }
 .footer .secContent .footerCard .footerSocials {
   margin-left: 10px;
@@ -245,6 +246,7 @@
     margin-top: 1rem;
   }
 }
+
 @media screen and (min-width: 600px) {
   .footer .secContent .contactDiv {
     flex-direction: row;
@@ -266,12 +268,24 @@
     width: max-content;
   }
 }
+
 @media screen and (min-width: 840px) {
   .footer {
     padding: 5rem 0;
   }
   .footer .secContent .footerCard {
     flex-direction: row;
+    width : 800px;
+  }
+  #padGroup1 {
+    width: 120px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+  }
+  #padGroup2 {
+    width: 150px;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
   }
   .footer .secContent .footerCard .footerLinks {
     grid-template-columns: repeat(3, 1fr);
@@ -281,9 +295,12 @@
     margin-top: 0rem;
   }
 }
+
 @media screen and (min-width: 1024px) {
   .footer .secContent .footerCard {
-    padding: 3rem 1rem;
+    padding: 1rem 1rem;
+    padding-bottom: 2.5rem;
+    width : 1000px;
   }
   .footer .secContent .footerCard .footerIntro .footerParagraph {
     font-size: 15px;
@@ -305,5 +322,17 @@
   .footer .secContent .footerCard .footerLinks .linkGroup .footerList {
     font-size: 16px;
     padding: 5px 0;
+  }
+  #padGroup1 {
+    width: 170px;
+  }
+  #padGroup2 {
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .footer .secContent .footerCard {
+    width : 60vw;
   }
 }/*# sourceMappingURL=footer.css.map */

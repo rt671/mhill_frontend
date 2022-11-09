@@ -48,10 +48,7 @@ const Footer = () => {
             </div>
 
             <div data-aos="fade-up" className="footerParagraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-              Sint, aspernatur, laudantium similique minima corrupti id et dolor 
-              laborum totam incidunt nobis sequi, nulla distinctio cumque
-               unde aliquid eum ipsa reprehenderit?
+              Being in the tourism business since 1994, M Hill Adventure has proven to be pivotal in delivering picturesque sightseeing experiences to its customers in the most affordable way. We provide group and individual tours in and across Uttarakhand.
             </div>
 
             <div data-aos="fade-up" className="footerSocials">
@@ -64,8 +61,8 @@ const Footer = () => {
           </div>
           
           {/* Group A */}
-          <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks grid">
-            <div className="linkGroup">
+          <div data-aos="fade-up" data-aos-duration="3000" className="footerLinks grid smolGrid">
+            <div className="linkGroup" id="padGroup1">
               <span className="groupTitle">
                 OUR ORGANIZATION
               </span>
@@ -80,12 +77,27 @@ const Footer = () => {
                 <Link className="navLink link" to="/packages/all">Tourism</Link>
               </li>
 
-              <li className="footerList flex">
+              {/* <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Payment
+              </li> */}
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                <Link className="navLink link" to="/packages/summer">Summer Trips</Link>
               </li>
 
               <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                <Link className="navLink link" to="/packages/winter">Winter Trips</Link>
+              </li>
+
+              <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                <Link className="navLink link" to="/packages/expeditions">Expeditions</Link>
+              </li>
+
+              {/* <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 <Link className="navLink link" to="/">Rent Cars</Link>
               </li>
@@ -98,18 +110,23 @@ const Footer = () => {
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Trip Advisor
-              </li>
+              </li>  */}
 
             </div>
           </div>
 
           {/* Group B */}
-          <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks grid">
-            <div className="linkGroup">
+          <div data-aos="fade-up" data-aos-duration="5000" className="footerLinks grid smolGrid">
+            <div className="linkGroup" id="padGroup2">
               <span className="groupTitle">
                 LAST MINUTE
               </span>
 
+              <li className="footerList flex">
+                <FiChevronRight className="icon"/>
+                Contact Us
+              </li>
+              
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
                 Satopanth & Swargarohini

@@ -10,6 +10,15 @@ const Package = () => {
   const [trips, setTrips] = useState([]);
 
   useEffect(() => {
+    if(path=='all')
+    {
+      axios.get("https://mhill-api.herokuapp.com/trips/all")
+      .then(res => {
+        setTrips(res.data);
+      })
+      .catch(err => console.log(err));
+    }
+    else{
     axios
       .get("http://mhill-api.herokuapp.com/trips/" + path)
       .then((res) => {
@@ -17,7 +26,8 @@ const Package = () => {
         setTrips(res.data);
       })
       .catch((err) => console.log(err));
-  }, [path]);
+    }
+  }, [path]);
 
   let seasonName = path[0].toUpperCase() + path.slice(1);
   console.log(seasonName);

@@ -28,11 +28,19 @@ const card = ({ trips }) => {
                   <HiOutlineLocationMarker className="icon" />
                   <span className="state">{trip.state}</span>
                 </span>
+
+                {
+                (trip.seasons==="summer-and-winter")? (<span className="season">SUMMER/WINTER</span>):
+                (<span className="season">{trip.seasons.toUpperCase()}</span>)
+                }
                 
+<<<<<<< HEAD
                 {
                 (trip.seasons==="summer-and-winter")? (<span className="season">SUMMER/WINTER</span>):
                 (<span className="season">{trip.seasons.toUpperCase()}</span>)
               }
+=======
+>>>>>>> 16d4cdd4ab16911e9d163ab273550af11e532a59
                 </div>
               </div>
 

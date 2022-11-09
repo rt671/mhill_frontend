@@ -251,6 +251,10 @@ textarea.input {
   transform: scale(1.05);
 }
 
+.form .text {
+  text-align: justify;
+}
+
 @media (max-width: 750px) {
   .form {
     grid-template-columns: 1fr;

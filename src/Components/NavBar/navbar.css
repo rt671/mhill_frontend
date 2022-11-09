@@ -37,13 +37,19 @@
     color: var(--PrimaryColor);
     transform: translate(5px);
     margin:1rem;
-    height: 60px;
+    height: 40px;
     width: auto;
 }
 
 a .btn {
     color:var(--whiteColor);
     font-weight: 500;
+}
+
+@media screen and (max-width: 400px) {
+    .logo {
+        font-size: 10px;
+    }
 }
 
 @media screen and (max-width: 911px) {
@@ -57,7 +63,7 @@ a .btn {
         display: none;
         top: 6rem;
         left: 50%;
-        transform: translate(-50%);
+        /* transform: translate(-50%); */
         z-index:2000;
         box-shadow: 0 2px 4px rgba(2, 15, 29, 0.904);
         transition: .1s ease-in-out;
