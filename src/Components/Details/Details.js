@@ -12,30 +12,32 @@ const Details = () => {
     destination: "",
     state: "",
     photo: "",
-    price: "",
+    price: 0,
     duration: "",
     seasons: "",
     desc: [],
-    days:[],
+    itinerary: [],
     mostVis: "",
   });
 
   useEffect(() => {
     axios
-      .get("https://mhill-api.herokuapp.com/trips/" + path)
+      .get("http://localhost:5000/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrip(res.data);
-        console.log(trip.days);
+        console.log(trip.itinerary);
       })
       .catch((err) => console.log(err));
   }, [path]);
 
-  let i=0;
+  console.log(trip.itinerary);
+
+  let i = 0;
   return (
-    <div className="singleTrip">
-      <div className="singleTripWrapper">
-        <img className="singleTripImg" src={trip.photo}></img>
+    <div className="trip">
+      <div className="tripMain">
+        <img className="tripImg" src={trip.photo}></img>
         {/* <div id="owl-example" className="owl-carousel">
           <div><img src="https://via.placeholder.com/300x300/936/c69/?text=1" alt=""/></div>
           <div><img src="https://via.placeholder.com/300x300/693/9c6/?text=2" alt=""/></div>
@@ -44,34 +46,52 @@ const Details = () => {
           <div><img src="https://via.placeholder.com/300x300/099/3cc/?text=5" alt=""/></div>
           <div><img src="https://via.placeholder.com/300x300/f93/fc6/?text=6" alt=""/></div>
         </div> */}
-        <h1 className="singleTripDest">{trip.destination}</h1>
-        <h2 className="singleTripState">{trip.state}</h2>
+        <h1 className="tripDest">{trip.destination}</h1>
+        <h2 className="tripState">{trip.state}</h2>
       </div>
-      <div className="singleTripInfo">
-        <div className="singleTripInfoDiv">
-          Duration: <b>{trip.duration}</b>
-          <span>, </span>
-          <span className="singleTripInfoSeason">{trip.seasons.toUpperCase()}</span>
+
+      <div className="tripInfo">
+        <div className="tripMeta">
+          <div className="tripMetaComp">
+            Duration: <b>{trip.duration}</b>
+            <span>, </span>
+            {trip.seasons === "summer-and-winter" ? (
+              <span className="tripSeason">SUMMER/WINTER</span>
+            ) : (
+              <span className="tripSeason">{trip.seasons.toUpperCase()}</span>
+            )}
+          </div>
+          <div className="tripMetaComp">
+            Price: ₹<b>{trip.price}</b>
+          </div>
         </div>
-        <div className="singleTripInfoDiv">
-          Price: ₹<b>{trip.price}</b>
-        </div>
-      </div>
-      <div className="singleTripDesc">
-        {trip.desc.map((para) => {
-          return (<p className="intro">{para}</p>);
-        })}
-        {
-          trip.days.map((day) => {
-            i=i+1;
+
+        <div className="tripDesc">
+          {trip.desc.map((para) => {
+            return <p className="intro">{para}</p>;
+          })}
+          {console.log(trip.itinerary)}
+          {trip.itinerary.map((it) => {
+            i = i + 1;
             return (
               <>
-               <div className="dayX">{"Day " + i}</div>
-               <p>{day}</p>
+                <div className="dayTitle">
+                  <span className="dayX">{"Day " + i}</span>
+                  <span>:</span>
+                  <span className="headX">{it.head}</span>
+                </div>
+                {it.detail.map((para) => {
+                  return <p className="details">{para}</p>;
+                })}
+                <ul>
+                  {it.points.map((pt) => {
+                    return <li className="points">{pt}</li>;
+                  })}
+                </ul>
               </>
-            )
-          })
-        }
+            );
+          })}
+        </div>
       </div>
     </div>
   );

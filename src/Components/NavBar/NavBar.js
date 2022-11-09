@@ -6,7 +6,7 @@ import logo from '../../Assets/logo.png'
 import { Link } from 'react-router-dom'
 // import {SiYourtraveldottv} from 'react-icons/si'
 
-const NavBar = () => {
+const NavBar = ({status}) => {
   const [active, setActive] = useState('navBar');
   const showNav = ()=> {
     setActive('navBar activeNavBar');
