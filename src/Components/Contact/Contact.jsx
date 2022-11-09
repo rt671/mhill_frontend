@@ -41,7 +41,7 @@ export default function ContactUs() {
         <div className="contact-info">
           <h3 className="title">Let's Get In Touch</h3>
           <p className="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, reprehenderit e repellat explicabo labore ea eaque, nihil ratione vero qui, nemo expedita
+            Being in the tourism business since 1994, M Hill Adventure has proven to be pivotal in delivering picturesque sightseeing experiences to its customers in the most affordable way in and across Uttarakhand.
           </p>
 
           <div className="info">
