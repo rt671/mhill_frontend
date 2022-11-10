@@ -3,7 +3,7 @@ import "./details.css";
 import axios from "axios";
 
 import React, { useState, useEffect } from "react";
-import Carousel from "../Carousel/Carousel";
+import CarouselComponent from "../CarouselComponent/CarouselComponent";
 
 const Details = () => {
   const location = useLocation();
@@ -12,7 +12,7 @@ const Details = () => {
   const [trip, setTrip] = useState({
     destination: "",
     state: "",
-    photo: "",
+    photos: [],
     price: 0,
     duration: "",
     seasons: "",
@@ -38,16 +38,7 @@ const Details = () => {
   return (
     <div className="trip">
       <div className="tripMain">
-        <Carousel></Carousel>
-        {/* <img className="tripImg" src={trip.photo}></img> */}
-        {/* <div id="owl-example" className="owl-carousel">
-          <div><img src="https://via.placeholder.com/300x300/936/c69/?text=1" alt=""/></div>
-          <div><img src="https://via.placeholder.com/300x300/693/9c6/?text=2" alt=""/></div>
-          <div><img src="https://via.placeholder.com/300x300/369/69c/?text=3" alt=""/></div>
-          <div><img src="https://via.placeholder.com/300x300/c33/f66/?text=4" alt=""/></div>
-          <div><img src="https://via.placeholder.com/300x300/099/3cc/?text=5" alt=""/></div>
-          <div><img src="https://via.placeholder.com/300x300/f93/fc6/?text=6" alt=""/></div>
-        </div> */}
+        <CarouselComponent photos = {trip.photos}></CarouselComponent>
         <h1 className="tripDest">{trip.destination}</h1>
         <h2 className="tripState">{trip.state}</h2>
       </div>
