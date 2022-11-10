@@ -16,7 +16,7 @@ const card = ({ trips }) => {
 
             {trip.photo && (
               <div className="imageDiv">
-                <img src={trip.photo} alt={trip.destination} />
+                <img src={trip.photos[0]} alt={trip.destination} />
               </div>
             )}
 
