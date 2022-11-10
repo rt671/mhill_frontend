@@ -9,7 +9,7 @@ const CarouselComponent = ({photos}) => {
     console.log("length is ", photos.length);
   return (
     <div className="carousel-wrapper">
-    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} centerMode>  
+    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false}>  
       { photos.map((photo) => {
         console.log(photo);
         return <div><img className="img" src={photo}></img></div>;
