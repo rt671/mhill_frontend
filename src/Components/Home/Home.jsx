@@ -33,7 +33,10 @@ const Home = () => {
                     <h1 data-aos="fade-up" className="homeTitle">
                         M Hill Adventure
                     </h1>
-                    <span style={{fontSize: '16px'}} data-aos="fade-up">The best tourism experience ever....</span>
+
+                    <h4 data-aos="fade-up" style={{fontWeight: "normal"}}>
+                        by Mannu Rawat
+                    </h4>
                 </div>
 
                 <div className="homeFooterIcons flex">
