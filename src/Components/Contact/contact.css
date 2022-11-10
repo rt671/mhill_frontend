@@ -283,9 +283,9 @@ textarea.input {
 }
 
 @media (max-width: 480px) {
-  .container {
+  /* .container {
     padding: 1.5rem;
-  }
+  } */
 
   .contact-info:before {
     display: none;
