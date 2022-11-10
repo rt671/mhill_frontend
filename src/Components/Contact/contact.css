@@ -260,6 +260,9 @@ textarea.input {
     grid-template-columns: 1fr;
   }
 
+  .title {
+    padding-top:0;
+  }
   .contact-info:before {
     bottom: initial;
     top: -75px;
