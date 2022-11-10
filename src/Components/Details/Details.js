@@ -3,6 +3,7 @@ import "./details.css";
 import axios from "axios";
 
 import React, { useState, useEffect } from "react";
+import Carousel from "../Carousel/Carousel";
 
 const Details = () => {
   const location = useLocation();
@@ -37,7 +38,8 @@ const Details = () => {
   return (
     <div className="trip">
       <div className="tripMain">
-        <img className="tripImg" src={trip.photo}></img>
+        <Carousel></Carousel>
+        {/* <img className="tripImg" src={trip.photo}></img> */}
         {/* <div id="owl-example" className="owl-carousel">
           <div><img src="https://via.placeholder.com/300x300/936/c69/?text=1" alt=""/></div>
           <div><img src="https://via.placeholder.com/300x300/693/9c6/?text=2" alt=""/></div>
