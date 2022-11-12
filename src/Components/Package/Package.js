@@ -10,7 +10,7 @@ const Package = () => {
   const [trips, setTrips] = useState([]);
 
   useEffect(() => {
-    if(path=='all')
+    if(path==='all')
     {
       axios.get("https://mhill-api.herokuapp.com/trips/all")
       .then(res => {
