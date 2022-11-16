@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import './home.css'
-import video from '../../Assets/video2.mp4'
-import {AiOutlineInstagram } from "react-icons/ai";
-import {FaTripadvisor} from 'react-icons/fa';
+import video from '../../Assets/video.mp4'
+import {AiOutlineInstagram, AiOutlineYoutube } from "react-icons/ai";
+// import {FaTripadvisor} from 'react-icons/fa';
 import {FiFacebook} from 'react-icons/fi';
 // import {BsListTask} from 'react-icons/bs'
 // import {TbApps} from 'react-icons/tb'
@@ -41,9 +41,9 @@ const Home = () => {
 
                 <div className="homeFooterIcons flex">
                     <div className="rightIcons">
-                        <FiFacebook className="icon"/>
-                        <AiOutlineInstagram className="icon"/>
-                        <FaTripadvisor className="icon"/>
+                        <a href="https://www.facebook.com/Satopant"><FiFacebook className="icon"/></a>
+                        <a href="https://www.instagram.com/mhilladventure/"><AiOutlineInstagram className="icon"/></a>
+                        <a href="https://www.youtube.com/channel/UCz5LzoYyQ3enznAIIUUHJFA"><AiOutlineYoutube className="icon"/></a>
                     </div>
                 </div>
             </div>

@@ -71,21 +71,21 @@ export default function ContactUs() {
           <div className="social-media">
             <p>Connect with us:</p>
             <div className="social-icons">
-              <a href="#">
+              <a href="https://twitter.com/MhillAdventure">
                 <AiOutlineTwitter />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/channel/UCz5LzoYyQ3enznAIIUUHJFA">
                 <AiFillYoutube />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/Satopant">
                 <AiFillFacebook />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/mhilladventure/">
                 <AiFillInstagram />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <FaTripadvisor />
-              </a>
+              </a> */}
             </div>
           </div>
 
