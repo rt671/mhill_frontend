@@ -98,17 +98,17 @@ export default function ContactUs() {
           <form autoComplete="off" action="https://formsubmit.co/mhilladventure@gmail.com" method="POST">
             <h3 className="heading">Contact us</h3>
             <div className="input-container">
-              <input type="text" name="name" className="input" />
+              <input type="text" name="name" className="input" required/>
               <label htmlFor="">Username</label>
               <span>Username</span>
             </div>
             <div className="input-container">
-              <input type="email" name="email" className="input" />
+              <input type="email" name="email" className="input" required/>
               <label htmlFor="">Email</label>
               <span>Email</span>
             </div>
             <div className="input-container">
-              <input type= "tel" name="phone" className="input" />
+              <input type= "tel" name="phone" className="input" required/>
               <label htmlFor="">Phone</label>
               <span>Phone</span>
             </div>
