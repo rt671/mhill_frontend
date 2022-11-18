@@ -95,7 +95,7 @@ export default function ContactUs() {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form autoComplete="off" method="POST" action="mailto:mhilladventure@gmail.com">
+          <form autoComplete="off" action="https://formsubmit.co/mhilladventure@gmail.com" method="POST">
             <h3 className="heading">Contact us</h3>
             <div className="input-container">
               <input type="text" name="name" className="input" />
