@@ -21,7 +21,7 @@ const NavBar = ({status}) => {
     <section className = "navBarSection">
       <header className="header flex">
           <div className="logoDiv">
-            <a href="#" className="logo flex">
+            <a href="/" className="logo flex">
             <img src={logo} className="icon" />
               <h1>M Hill Adventure.</h1>
             </a>
@@ -57,7 +57,7 @@ const NavBar = ({status}) => {
             </div>
             </div>
 
-          <div className="openNavBar" onMouseOver={showNav}>
+          <div className="openNavBar" onClick={showNav}>
             <TbDotsVertical className="icon"></TbDotsVertical>
           </div>
       </header>

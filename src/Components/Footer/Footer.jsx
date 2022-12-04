@@ -30,12 +30,12 @@ const Footer = () => {
             <h2>Travel with us</h2>
           </div>
 
-          <div className="inputDiv flex">
-            <input data-aos="fade-up" type="text" placeholder='Enter Your Email Address!'/>
+          <form className="inputDiv flex">
+            <input data-aos="fade-up" type="email" placeholder='Enter Your Email Address!' required/>
             <button data-aos="fade-up" className="btn flex" type="submit">
               SEND <FiSend className="icon"/>
             </button>
-          </div>
+          </form>
         </div>
 
         <div className="footerCard flex">
