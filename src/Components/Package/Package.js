@@ -12,7 +12,7 @@ const Package = () => {
   useEffect(() => {
     if(path==='all')
     {
-      axios.get("https://mhill-api.herokuapp.com/trips/all")
+      axios.get("https://api.mhilladventure.com/trips/all")
       .then(res => {
         setTrips(res.data);
       })
@@ -20,7 +20,7 @@ const Package = () => {
     }
     else{
     axios
-      .get("https://mhill-api.herokuapp.com/trips/seasons/" + path)
+      .get("https://api.mhilladventure.com/trips/seasons/" + path)
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);

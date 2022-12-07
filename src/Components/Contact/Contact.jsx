@@ -1,8 +1,8 @@
 import React, { useEffect } from "react"; 
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md"
 import { AiOutlineTwitter, AiFillYoutube, AiFillFacebook, AiFillInstagram} from "react-icons/ai"
-import {FaTripadvisor, FaTwitter} from "react-icons/fa"
-import axios from "axios";
+// import {FaTripadvisor, FaTwitter} from "react-icons/fa"
+// import axios from "axios";
 import './contact.css'
 
 export default function ContactUs() {
@@ -27,12 +27,12 @@ export default function ContactUs() {
     });
   }, []);
 
-  const postContactInfo = () => {
-    console.log("Posting contact info to backend")
-    axios.post("https://mhill-api.herokuapp.com/trips/contact")
-    .then(res => console.log("Message and Contact info sent!"))
-    .catch(err=> console.log(err));
-  }
+  // const postContactInfo = () => {
+  //   console.log("Posting contact info to backend")
+  //   axios.post("https://api.mhilladventure.com/trips/contact")
+  //   .then(res => console.log("Message and Contact info sent!"))
+  //   .catch(err=> console.log(err));
+  // }
 
   return (
     <section className="contact">
