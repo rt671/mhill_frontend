@@ -1,8 +1,7 @@
 import React, { useEffect } from "react"; 
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md"
 import { AiOutlineTwitter, AiFillYoutube, AiFillFacebook, AiFillInstagram} from "react-icons/ai"
-import {FaTripadvisor, FaTwitter} from "react-icons/fa"
-import axios from "axios";
+import {FaTripadvisor} from "react-icons/fa"
 import './contact.css'
 
 export default function ContactUs() {
@@ -16,7 +15,7 @@ export default function ContactUs() {
 
     function blurFunc() {
         let parent = this.parentNode;
-        if(this.value == "") {
+        if(this.value === "") {
             parent.classList.remove("focus");
         }
     }
@@ -27,12 +26,12 @@ export default function ContactUs() {
     });
   }, []);
 
-  const postContactInfo = () => {
-    console.log("Posting contact info to backend")
-    axios.post("https://mhill-api.herokuapp.com/trips/contact")
-    .then(res => console.log("Message and Contact info sent!"))
-    .catch(err=> console.log(err));
-  }
+  // const postContactInfo = () => {
+  //   console.log("Posting contact info to backend")
+  //   axios.post("https://mhill-api.herokuapp.com/trips/contact")
+  //   .then(res => console.log("Message and Contact info sent!"))
+  //   .catch(err=> console.log(err));
+  // }
 
   return (
     <section className="contact">

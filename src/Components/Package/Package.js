@@ -10,9 +10,9 @@ const Package = () => {
   const [trips, setTrips] = useState([]);
 
   useEffect(() => {
-    if(path=='all')
+    if(path==='all')
     {
-      axios.get("https://mhill-api.herokuapp.com/trips/all")
+      axios.get("https://api.mhilladventure.com/trips/")
       .then(res => {
         setTrips(res.data);
       })
@@ -20,7 +20,7 @@ const Package = () => {
     }
     else{
     axios
-      .get("http://mhill-api.herokuapp.com/trips/seasons/" + path)
+      .get("https://api.mhilladventure.com/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);

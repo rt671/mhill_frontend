@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./details.css";
 import axios from "axios";
 
@@ -23,7 +23,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get("http://mhill-api.herokuapp.com/trips/" + path)
+      .get("https://api.mhilladventure.com/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrip(res.data);

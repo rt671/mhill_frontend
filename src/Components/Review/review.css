@@ -1,0 +1,74 @@
+.reviewPage {
+  /* background-color: white; */
+  padding: 1rem;
+  /* border: 1px solid black; */
+}
+.singleReview {
+  display: grid;
+  border-radius: 10px;
+  align-items: center;
+  background: var(--cardBG);
+  box-shadow: 0 2px 4px rgba(140, 140, 141, 0.549);
+  overflow: hidden;
+  padding: 1.5rem 1.75rem;
+  margin: 0.75rem;
+}
+
+.reviewTitle {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.reviewAuthor {
+  font-size: 0.85rem;
+  margin: 0.5rem 0rem;
+}
+
+.reviewHead {
+  padding: 0.5rem 1rem;
+  /* text-decoration: underline; */
+}
+
+.writeInput {
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  background-color: var(--cardBG);
+  margin: 0.5rem;
+}
+
+.writeInput:focus {
+    outline-style:none
+  }
+
+.writeText {
+  width: 70vw;
+  height: 10vh;
+  font-family: inherit;
+  font-size: 20px;
+  border-left: 1px solid gray;
+}
+
+.authorip {
+  border: none;
+  border-bottom: 1px solid gray;
+  background-color: var(--cardBG);
+  margin: 0.5rem;
+  font-size:0.8rem;
+}
+
+.authorip:focus{
+  outline-style: none;
+}
+
+.writeSubmit {
+  /* position: relative; */
+  /* right: 7%; */
+  color: white;
+  background-color: teal;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}

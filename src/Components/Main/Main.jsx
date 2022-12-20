@@ -13,7 +13,7 @@ const Main = () => {
 
   useEffect(() => {
     axios
-      .get("http://mhill-api.herokuapp.com/trips/")
+      .get("https://api.mhilladventure.com/trips/")
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);

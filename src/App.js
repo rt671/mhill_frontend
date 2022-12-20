@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./app.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Main from "./Components/Main/Main";
@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import Package from "./Components/Package/Package";
 import Details from "./Components/Details/Details";
 import Contact from "./Components/Contact/Contact";
+import Review from "./Components/Review/Review"
 
 const App = () => {
   // const [navBar, setNavBar] = useState('');
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/trips/:id" element={<Details />}></Route> 
         <Route path="/contact" element={<Contact/>}></Route>
       </Routes>
+      <Review />
       <Footer />
     </Router>
   );
