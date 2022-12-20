@@ -48,11 +48,18 @@ const card = ({ trips }) => {
 
               <div className="desc">
                 <p>{trip.desc}</p>
-                <Link to={`/trips/${trip._id}`} className="link">
-                  <button className="btn flex">
-                    DETAILS <HiOutlineClipboardCheck className="icon" />
-                  </button>
-                </Link>
+                <div className="buttons">
+                  <Link to={`/trips/${trip._id}`} className="link">
+                    <button className="btn flex">
+                      DETAILS <HiOutlineClipboardCheck className="icon" />
+                    </button>
+                  </Link>
+                  <Link to={`/packages/all`} className="link">
+                    <button className="btn flex">
+                      MORE TRIPS <HiOutlineClipboardCheck className="icon" />
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

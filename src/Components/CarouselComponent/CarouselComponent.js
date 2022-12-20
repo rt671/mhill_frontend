@@ -14,7 +14,7 @@ const CarouselComponent = ({photos}) => {
         return <div><img className="img" src={photo}></img></div>;
        }) 
     } 
-  </Carousel> 
+    </Carousel> 
   </div> 
   );
 };

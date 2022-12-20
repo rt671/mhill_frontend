@@ -123,6 +123,31 @@ a .btn {
     color: var(--PrimaryColor)
 }
 
+.wabtn {
+    position:fixed;
+    width:200px;
+    height:40px;
+    bottom:30px;
+    right:50px;
+    background-color:#0C9;
+    color:#FFF;
+    border-radius:5px;
+    text-align:center;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 10000;
+}
+
+@media screen and (max-width: 600px) {
+    .wabtn {
+        position:fixed;
+        width:150px;
+        height:30px;
+        bottom:25px;
+        right:25px;
+        border-radius:5px;
+    }
+}
+
 @media screen and (min-width: 912px){
     .openNavBar, .closeNavBar {
         display:none;

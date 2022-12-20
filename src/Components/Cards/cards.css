@@ -109,8 +109,9 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   padding-left: 15px;
-
+  
 }
+
 
  .desc p {
   overflow: hidden;
@@ -128,6 +129,12 @@
   gap: 0.5rem;
   margin-left: -2px;
 }
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
 .desc .btn .icon {
   align-self: center;
   font-size: 18px;

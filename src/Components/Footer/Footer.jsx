@@ -1,8 +1,8 @@
 import React, {useEffect} from "react";
 import './footer.css'
-import video2 from '../../Assets/video.mp4'
-import { FiSend, FiChevronRight } from "react-icons/fi";
-import { AiOutlineTwitter, AiFillYoutube, AiFillInstagram, AiFillFacebook} from "react-icons/ai"
+import video2 from '../../Assets/video2.mp4'
+import { FiSend, FiChevronRight} from "react-icons/fi";
+import { AiFillTwitterCircle, AiFillYoutube, AiFillInstagram, AiFillFacebook} from "react-icons/ai"
 import { FaTripadvisor } from "react-icons/fa"
 import logo from '../../Assets/logo.png'
 import { Link } from "react-router-dom";
@@ -30,12 +30,12 @@ const Footer = () => {
             <h2>Travel with us</h2>
           </div>
 
-          <div className="inputDiv flex">
-            <input data-aos="fade-up" type="text" placeholder='Enter Your Email Address!'/>
+          <form className="inputDiv flex">
+            <input data-aos="fade-up" type="email" placeholder='Enter Your Email Address!' required/>
             <button data-aos="fade-up" className="btn flex" type="submit">
               SEND <FiSend className="icon"/>
             </button>
-          </div>
+          </form>
         </div>
 
         <div className="footerCard flex">
@@ -43,20 +43,20 @@ const Footer = () => {
             <div className="logoDiv">
               <a href="#" className="logo flex">
                 <img src= {logo} className="icon"/>
-                Mhill Travels.
+                M Hill Adventure
               </a>
             </div>
 
             <div data-aos="fade-up" className="footerParagraph">
-              Being in the tourism business since 1994, M Hill Adventure has proven to be pivotal in delivering picturesque sightseeing exp to its customers in the most affordable way. We provide group and individual tours in and across Uttarakhand.
+            Being in the tourism business since 1994, M Hill Adventure has proven to be a pivotal interface for delivering picturesque sightseeing experiences to its valued customers in the most affordable way. We provide group and individual tours in and across Uttarakhand.
             </div>
 
             <div data-aos="fade-up" className="footerSocials">
-              <AiOutlineTwitter className="icon"/>
-              <AiFillYoutube className="icon"/>
-              <AiFillFacebook className="icon" />
-              <AiFillInstagram className="icon"/>
-              <FaTripadvisor className="icon"/>
+              <a href="https://twitter.com/MhillAdventure"><AiFillTwitterCircle className="icon"/></a>
+              <a href="https://www.facebook.com/Satopant"><AiFillFacebook className="icon"/></a>
+              <a href="https://www.instagram.com/mhilladventure/"><AiFillInstagram className="icon"/></a>
+              <a href="https://www.youtube.com/channel/UCz5LzoYyQ3enznAIIUUHJFA"><AiFillYoutube className="icon"/></a>
+              {/* <FaTripadvisor className="icon"/> */}
             </div>
           </div>
           
@@ -124,27 +124,27 @@ const Footer = () => {
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Contact Us
+                <Link className="navLink link" to="/contact">Contact Us</Link>
               </li>
               
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Satopanth & Swargarohini
+                <Link className="navLink link" to="/trips/635027cb0c6203ad3f2db755">Satopanth & Swargarohini</Link>
               </li>
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Kuari Pass Trek
+                <Link className="navLink link" to="/trips/635028c20c6203ad3f2db75a">Kuari Pass Trek</Link>
               </li>
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Dronagiri / Bagani Trek
+                <Link className="navLink link" to="/trips/635029430c6203ad3f2db75c">Dronagiri/ Bagani Trek</Link>
               </li>
 
               <li className="footerList flex">
                 <FiChevronRight className="icon"/>
-                Brahmatal Trek
+                <Link className="navLink link" to="/trips/6362cbc8d3977b42fc992524">Brahmatal Trek</Link>
               </li>
             </div>
           </div>

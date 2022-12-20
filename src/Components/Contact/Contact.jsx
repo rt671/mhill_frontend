@@ -1,7 +1,8 @@
 import React, { useEffect } from "react"; 
 import { MdPhone, MdEmail, MdLocationOn } from "react-icons/md"
 import { AiOutlineTwitter, AiFillYoutube, AiFillFacebook, AiFillInstagram} from "react-icons/ai"
-import {FaTripadvisor} from "react-icons/fa"
+// import {FaTripadvisor, FaTwitter} from "react-icons/fa"
+// import axios from "axios";
 import './contact.css'
 
 export default function ContactUs() {
@@ -28,7 +29,7 @@ export default function ContactUs() {
 
   // const postContactInfo = () => {
   //   console.log("Posting contact info to backend")
-  //   axios.post("https://mhill-api.herokuapp.com/trips/contact")
+  //   axios.post("https://api.mhilladventure.com/trips/contact")
   //   .then(res => console.log("Message and Contact info sent!"))
   //   .catch(err=> console.log(err));
   // }
@@ -40,7 +41,7 @@ export default function ContactUs() {
         <div className="contact-info">
           <h3 className="title">Let's Get In Touch</h3>
           <p className="text">
-            Being in the tourism business since 1994, M Hill Adventure has proven to be pivotal in delivering picturesque sightseeing experiences to its customers in the most affordable way in and across Uttarakhand.
+          Being in the tourism business since 1994, M Hill Adventure has proven to be a pivotal platform for delivering picturesque sightseeing experiences to its valued customers in the most affordable way. We provide group and individual tours in and across Uttarakhand.
           </p>
 
           <div className="info">
@@ -70,21 +71,21 @@ export default function ContactUs() {
           <div className="social-media">
             <p>Connect with us:</p>
             <div className="social-icons">
-              <a href="#">
+              <a href="https://twitter.com/MhillAdventure">
                 <AiOutlineTwitter />
               </a>
-              <a href="#">
+              <a href="https://www.youtube.com/channel/UCz5LzoYyQ3enznAIIUUHJFA">
                 <AiFillYoutube />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/Satopant">
                 <AiFillFacebook />
               </a>
-              <a href="#">
+              <a href="https://www.instagram.com/mhilladventure/">
                 <AiFillInstagram />
               </a>
-              <a href="#">
+              {/* <a href="#">
                 <FaTripadvisor />
-              </a>
+              </a> */}
             </div>
           </div>
 
@@ -94,20 +95,20 @@ export default function ContactUs() {
           <span className="circle one"></span>
           <span className="circle two"></span>
 
-          <form autoComplete="off" method="POST" action="mailto:mhilladventure@gmail.com">
+          <form autoComplete="off" action="https://formsubmit.co/mhilladventure@gmail.com" method="POST">
             <h3 className="heading">Contact us</h3>
             <div className="input-container">
-              <input type="text" name="name" className="input" />
+              <input type="text" name="name" className="input" required/>
               <label htmlFor="">Username</label>
               <span>Username</span>
             </div>
             <div className="input-container">
-              <input type="email" name="email" className="input" />
+              <input type="email" name="email" className="input" required/>
               <label htmlFor="">Email</label>
               <span>Email</span>
             </div>
             <div className="input-container">
-              <input type= "tel" name="phone" className="input" />
+              <input type= "tel" name="phone" className="input" required/>
               <label htmlFor="">Phone</label>
               <span>Phone</span>
             </div>
