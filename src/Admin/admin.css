@@ -1,0 +1,24 @@
+.admincover{
+   width: 100%;
+
+
+}
+
+/* h2{
+    position: relative;
+
+    margin-top: 10rem;
+} */
+.writeSubmit {
+    /* position: relative; */
+    /* right: 7%; */
+    color: white;
+    background-color: teal;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width:8rem;
+  }
+  

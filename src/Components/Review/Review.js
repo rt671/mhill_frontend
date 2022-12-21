@@ -34,7 +34,7 @@ const Review = () => {
 
   return (
     <div className="reviewPage">
-      <h2 className="reviewHead">Reviews</h2>
+      <h3 className="reviewHead">Reviews</h3>
       <div className="grid">
         {reviews.map((review) => {
           return (

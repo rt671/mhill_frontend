@@ -16,7 +16,9 @@
 
 .reviewTitle {
   font-weight: 800;
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
+  color: var(--textColor);
+
 }
 
 .reviewAuthor {

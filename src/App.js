@@ -9,6 +9,7 @@ import Package from "./Components/Package/Package";
 import Details from "./Components/Details/Details";
 import Contact from "./Components/Contact/Contact";
 import Review from "./Components/Review/Review"
+import Admin from "./Admin/Admin"
 
 const App = () => {
   // const [navBar, setNavBar] = useState('');
@@ -35,8 +36,8 @@ const App = () => {
         <Route path="/packages/:seasons" element={<Package />}></Route>
         <Route path="/trips/:id" element={<Details />}></Route> 
         <Route path="/contact" element={<Contact/>}></Route>
+        <Route path="/admin" element={<Admin/>}></Route>
       </Routes>
-      <Review />
       <Footer />
     </Router>
   );
