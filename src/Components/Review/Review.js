@@ -9,7 +9,7 @@ const Review = () => {
   // console.log("REVIEWS TRYING TO BE FOUND")
   useEffect(() => {
     axios
-      .get("http://localhost:5000/reviews/all")
+      .get("https://api.mhilladventure.com/reviews/all")
       .then((res) => {
         setReviews(res.data);
         console.log(res.data);
@@ -26,7 +26,7 @@ const Review = () => {
     const newReview = {
       title, author, body
     }
-    axios.post("http://localhost:5000/reviews/", newReview)
+    axios.post("https://api.mhilladventure.com/reviews/", newReview)
     .then(res => console.log("Posted the review!"))
     .catch(err => console.log(err));
     window.location.replace("/");
