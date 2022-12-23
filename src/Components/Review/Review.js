@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./review.css";
+import { Rating } from 'react-simple-star-rating'
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
@@ -20,18 +21,37 @@ const Review = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [body, setBody] = useState("");
+  const [file, setFile] = useState(null);
+  const [rating, setRating] = useState(0)
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newReview = {
-      title, author, body
+      title, author, body, rating
     }
-    axios.post("http://localhost:5000/reviews/", newReview)
+
+    if (file) {
+      const data = new FormData();
+      const filename = Date.now() + file.name;
+      data.append("name", filename);
+      data.append("file", file);
+      newReview.image = filename;
+      axios.post("http://localhost:5000/upload/", data)
+      .then(res => console.log("Uploaded image!"))
+      .catch(err=> console.log(err));
+    }
+      axios.post("http://localhost:5000/reviews/", newReview)
     .then(res => console.log("Posted the review!"))
     .catch(err => console.log(err));
     window.location.replace("/");
   }
 
+  const handleRating = (rate) => {
+    setRating(rate)
+    console.log(rate);
+  }
+  
+  const PF = "http://localhost:5000/images/";
   return (
     <div className="reviewPage">
       <h3 className="reviewHead">Reviews</h3>
@@ -40,9 +60,18 @@ const Review = () => {
           return (
             <div className="singleReview">
               <p className="reviewTitle">{review.title}</p>
+              <p>{review.rating}</p>
+              <Rating initialValue={review.rating} readonly = {true}></Rating>
               <div className="reviewAuthor">{review.author}</div>
+              {review.image && (
+          <img
+            src={PF + review.image}
+            alt="The Uploaded Image"
+          />
+        )}
               <div>{review.body}</div>
             </div>
+
           );
         })}
         <div className="singleReview">
@@ -54,10 +83,21 @@ const Review = () => {
                 type="text"
                 onChange={e => setTitle(e.target.value)}
               ></input>
+              <Rating
+        onClick={handleRating}>
+        </Rating>
             </div>
             <div >
               <input className="authorip" placeholder="What's your name?" type="text" onChange={e => setAuthor(e.target.value)}></input>
+            <input type="file"            onChange={(e) => setFile(e.target.files[0])} 
+            />
             </div>
+            {file && (
+        <img
+          src={URL.createObjectURL(file)}
+          alt=""
+        />
+      )}
             <div>
               <textarea
                 className="writeInput writeText"
