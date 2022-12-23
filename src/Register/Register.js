@@ -7,7 +7,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
 
     const handleSubmit  = () => {
-        axios.post("http://localhost:5000/auth", {username, password})
+        axios.post("https://api.mhilladventure.com/auth", {username, password})
         .then(res => window.location.replace("/admin/login"))
         .catch(err => console.log(err));
     }
