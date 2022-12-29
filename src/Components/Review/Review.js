@@ -36,7 +36,7 @@ const Review = () => {
       data.append("name", filename);
       data.append("file", file);
       newReview.image = filename;
-      axios.post("http://localhost:5000/upload/", data)
+      axios.post("https://api.mhilladventure.com/upload/", data)
       .then(res => console.log("Uploaded image!"))
       .catch(err=> console.log(err));
     }
@@ -51,7 +51,7 @@ const Review = () => {
     console.log(rate);
   }
   
-  const PF = "http://localhost:5000/images/";
+  const PF = "https://api.mhilladventure.com/images/";
   return (
     <div className="reviewPage">
       <h3 className="reviewHead">Reviews</h3>
@@ -79,7 +79,7 @@ const Review = () => {
           <form onSubmit={handleSubmit}>
             <div>
               <input className="writeInput"
-                placeholder="What do you wanna highlight?"
+                placeholder="What do you want to highlight?"
                 type="text"
                 onChange={e => setTitle(e.target.value)}
               ></input>
