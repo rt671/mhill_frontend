@@ -9,7 +9,7 @@ const Review = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.mhilladventure.com/reviews/all")
+      .get("http://localhost:5000/reviews/all")
       .then((res) => {
         setReviews(res.data);
         console.log(res.data);
@@ -20,8 +20,41 @@ const Review = () => {
   const [title, setTitle] = useState("");
   const [author, setAuthor] = useState("");
   const [body, setBody] = useState("");
-  const [file, setFile] = useState(null);
+  const [images, setImages] = useState([]);
   const [rating, setRating] = useState(0);
+  const [fileLimit, setFileLimit] = useState(false);
+  const MAX_CNT = 10;
+
+  const handleImages = files => {
+    const uploaded = [...images];
+    let limitExceeded = false;
+    files.some((file) => {
+      if (uploaded.findIndex((f) => f.name === file.name) === -1) {
+        uploaded.push(file);
+        if (uploaded.length === MAX_CNT) setFileLimit(true);
+        if (uploaded.length > MAX_CNT) {
+            alert(`Maximum of ${MAX_CNT} files are allowed`);
+            setFileLimit(false);
+            limitExceeded = true;
+            return true;
+          }
+            }
+    })
+    if(!limitExceeded) setImages(uploaded)
+  }
+
+  const handleImageUpload = (e)  => {
+    const chosenImages = Array.prototype.slice.call(e.target.files)
+    handleImages(chosenImages);
+  }
+
+  const deleteImage = (file) => {
+    console.log("Deleting the file", file.name);
+    const img = [...images];
+    let idx = img.indexOf(file);
+    img.splice(idx, 1);
+    setImages(img);
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,23 +64,40 @@ const Review = () => {
       body,
       rating,
     };
-
-    if (file) {
+    {console.log(images.length)}
+    const imgNameArr = [];
+    if (images.length>0) {
       const data = new FormData();
-      const filename = Date.now() + file.name;
-      data.append("name", filename);
-      data.append("file", file);
-      newReview.image = filename;
+      images.map(file => {
+        console.log(file.name);
+        const filename = Date.now() + file.name;
+        data.append("name", filename);
+        data.append("files", file);
+       imgNameArr.push(filename);
+      })
+      newReview.image = imgNameArr;
       axios
-        .post("https://api.mhilladventure.com/upload/", data)
-        .then((res) => console.log(res))
-        .catch((err) => console.log("THERE'S AN ERROR", err));
+        .post("http://localhost:5000/upload/", data)
+        .then((res) => {
+          console.log("UPLOAD SUCCESSFUL", res);
+          axios
+            .post("http://localhost:5000/reviews/", newReview)
+            .then((res) => {
+              console.log("Posted the review!");
+              // window.location.replace("/");
+            })
+            .catch((err) => console.log("err"));
+        })
+        .catch((err) => console.log("THERE'S AN ERROR IN UPLOADING THE IMAGES", err));
+    } else {
+      axios
+        .post("http://localhost:5000/reviews/", newReview)
+        .then((res) => {
+          console.log("Posted the review!");
+          window.location.replace("/");
+        })
+        .catch((err) => console.log(err));
     }
-    axios
-      .post("https://api.mhilladventure.com/reviews/", newReview)
-      .then((res) => console.log("Posted the review!"))
-      .catch((err) => console.log(err));
-    // window.location.replace("/");
   };
 
   const handleRating = (rate) => {
@@ -55,7 +105,7 @@ const Review = () => {
     console.log(rate);
   };
 
-  const PF = "https://api.mhilladventure.com/images/";
+  const PF = "http://localhost:5000/images/";
   return (
     <div className="reviewPage">
       <h3 className="reviewHead">Reviews</h3>
@@ -67,9 +117,14 @@ const Review = () => {
               <p>{review.rating}</p>
               <Rating initialValue={review.rating} readonly={true}></Rating>
               <div className="reviewAuthor">{review.author}</div>
-              {review.image && (
-                <img src={PF + review.image} alt="The Uploaded Image" />
-              )}
+              {review.image.length>0 && review.image.map(image => {
+                return (<img
+                src={PF + image}
+                className="reviewImage"
+                alt={image}
+              />);
+              }) 
+                }
               <div>{review.body}</div>
             </div>
           );
@@ -80,7 +135,7 @@ const Review = () => {
         }
         <div className="singleReview">
           <div className="reviewTitle">Post you review</div>
-          <form onSubmit={handleSubmit} enctype="multipart/form-data">
+          <form enctype='multipart/form-data' onSubmit={handleSubmit}>
             <div>
               <input
                 className="writeInput"
@@ -97,9 +152,23 @@ const Review = () => {
                 type="text"
                 onChange={(e) => setAuthor(e.target.value)}
               ></input>
-              <input type="file" onChange={(e) => setFile(e.target.files[0])} />
+              <input type="file" multiple='multiple' accept='image/*'onChange={handleImageUpload} /> 
             </div>
-            {file && <img src={URL.createObjectURL(file)} alt="" />}
+            {/* <div>The count of images is {images.length}</div> */}
+            
+            {
+            images.map(file => {
+              return (
+              <div><img
+                src={URL.createObjectURL(file)}
+                className="reviewImage"
+                alt=""
+              />
+              <button type="button"  onClick = {() => deleteImage(file)}>X</button>
+              </div>)
+              })
+            }
+            
             <div>
               <textarea
                 className="writeInput writeText"

@@ -71,6 +71,14 @@ color:var(--PrimaryColor);
   margin-bottom: 0.3rem;
   font-weight:bold;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+.tripDesc .dayTitle:hover {
+  cursor: pointer;
+  box-shadow: -2.5px 2.5px 2.5px gray;
 }
 
 .dayTitle .headX
@@ -84,6 +92,15 @@ color:var(--PrimaryColor);
 
 .point-list {
   padding-left: 1.5rem;
+}
+
+.expand {
+  font-size:2rem;
+  margin:4px;
+}
+
+.expand:hover {
+  color:var(--SecondaryColor)
 }
 
 @media screen and (max-width:550px) { 
@@ -104,7 +121,7 @@ color:var(--PrimaryColor);
     font-size: 20px;
   }
   .tripDesc {
-    font-size:16px;
+    font-size:13px;
     line-height: 24px;
   }
 

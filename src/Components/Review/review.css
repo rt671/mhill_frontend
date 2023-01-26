@@ -74,3 +74,8 @@
   font-size: 16px;
   cursor: pointer;
 }
+
+.reviewImage{
+  width: 350px;
+  height:200px;
+}

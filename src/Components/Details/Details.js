@@ -8,6 +8,15 @@ import CarouselComponent from "../CarouselComponent/CarouselComponent";
 const Details = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
+  const [days, setDays] = new useState(0);
+  const [dayDetail, setDayDetail] = new useState(Array(days).fill(false));
+
+  const toggleDayDetail = (idx) => {
+    console.log("Hello, toggling", days, dayDetail);
+    const newDayDetail = [...dayDetail];
+    newDayDetail[idx] = !newDayDetail[idx];
+    setDayDetail(newDayDetail);
+  };
 
   const [trip, setTrip] = useState({
     destination: "",
@@ -28,6 +37,7 @@ const Details = () => {
         console.log(res.data);
         setTrip(res.data);
         console.log(trip.itinerary);
+        setDays(trip.itinerary.length);
       })
       .catch((err) => console.log(err));
   }, [path]);
@@ -38,7 +48,7 @@ const Details = () => {
   return (
     <div className="trip">
       <div className="tripMain">
-        <CarouselComponent photos = {trip.photos}></CarouselComponent>
+        <CarouselComponent photos={trip.photos}></CarouselComponent>
         <h1 className="tripDest">{trip.destination}</h1>
         <h2 className="tripState">{trip.state}</h2>
       </div>
@@ -64,23 +74,30 @@ const Details = () => {
             return <p className="intro">{para}</p>;
           })}
           {console.log(trip.itinerary)}
-          {trip.itinerary.map((it) => {
+          {trip.itinerary.map((it, idx) => {
             i = i + 1;
             return (
               <>
-                <div className="dayTitle">
+                <div className="dayTitle" onClick={() => toggleDayDetail(idx)}>
+                  <div>
                   <span className="dayX">{"Day " + i}</span>
                   <span>:</span>
                   <span className="headX">{it.head}</span>
+                  </div>
+                  <div className="expand" >+</div>
                 </div>
-                {it.detail.map((para) => {
-                  return <p className="details">{para}</p>;
-                })}
-                <ul className="point-list">
-                  {it.points.map((pt) => {
-                    return <li className="points">{pt}</li>;
-                  })}
-                </ul>
+                {dayDetail[idx] && (
+                  <div>
+                    {it.detail.map((para) => {
+                      return <p className="details">{para}</p>;
+                    })}
+                    <ul className="point-list">
+                      {it.points.map((pt) => {
+                        return <li className="points">{pt}</li>;
+                      })}
+                    </ul>
+                  </div>
+                )}
               </>
             );
           })}
