@@ -32,7 +32,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/trips/" + path)
+      .get("https://api.mhilladventure.com/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrip(res.data);
@@ -48,7 +48,7 @@ const Details = () => {
   return (
     <div className="trip">
       <div className="tripMain">
-        <CarouselComponent photos={trip.photos}></CarouselComponent>
+        <CarouselComponent photos={trip.photos} classname="details"></CarouselComponent>
         <h1 className="tripDest">{trip.destination}</h1>
         <h2 className="tripState">{trip.state}</h2>
       </div>

@@ -14,7 +14,7 @@ const Main = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/trips/")
+      .get("https://api.mhilladventure.com/trips/")
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);

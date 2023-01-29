@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "./review.css";
 import { Rating } from "react-simple-star-rating";
+import CarouselComponent from "../CarouselComponent/CarouselComponent";
 
 const Review = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/reviews/all")
+      .get("https://api.mhilladventure.com/all")
       .then((res) => {
         setReviews(res.data);
         console.log(res.data);
@@ -80,21 +81,21 @@ const Review = () => {
       })
       newReview.image = imgNameArr;
       axios
-        .post("http://localhost:5000/upload/", data)
+        .post("https://api.mhilladventure.com/upload/", data)
         .then((res) => {
           console.log("UPLOAD SUCCESSFUL", res);
           axios
-            .post("http://localhost:5000/reviews/", newReview)
+            .post("https://api.mhilladventure.com/reviews/", newReview)
             .then((res) => {
               console.log("Posted the review!");
-              // window.location.replace("/");
+              window.location.replace("/");
             })
             .catch((err) => console.log("err"));
         })
         .catch((err) => console.log("THERE'S AN ERROR IN UPLOADING THE IMAGES", err));
     } else {
       axios
-        .post("http://localhost:5000/reviews/", newReview)
+        .post("https://api.mhilladventure.com/reviews/", newReview)
         .then((res) => {
           console.log("Posted the review!");
           window.location.replace("/");
@@ -108,30 +109,29 @@ const Review = () => {
     console.log(rate);
   };
 
-  const PF = "http://localhost:5000/images/";
+  let pics = [];
+
+  const PF = "https://api.mhilladventure.com/images/";
+  
   return (
     <div className="reviewPage">
       <h3 className="reviewHead">Reviews</h3>
       <div className="grid">
         {reviews.map((review) => {
+          review.image.length>0 && (
+            pics = review.image.map(image => {
+              return (PF+image);
+            }) )
           return (
             <div className="singleReview">
               <p className="reviewTitle">{review.title}</p>
               <p>{review.rating}</p>
               <Rating initialValue={review.rating} readonly={true}></Rating>
               <div className="reviewAuthor">{review.author}</div>
-              {/* {review.image.length>0 && 
-              <CarouselComponent photos={trip.photos}></CarouselComponent>
-            }  */}
-
-              {review.image.length>0 && review.image.map(image => {
-                return (<img
-                src={PF + image}
-                className="reviewImage"
-                alt={image}
-              />);
-              }) 
-                }
+             
+              
+              {review.image.length>0 && <CarouselComponent classname="reviews" photos={pics}></CarouselComponent>}
+                
               <div>{review.body}</div>
             </div>
           );
@@ -162,19 +162,21 @@ const Review = () => {
               <input type="file" multiple='multiple' accept='image/*'onChange={handleImageUpload} /> 
             </div>
             {/* <div>The count of images is {images.length}</div> */}
-            
+
+            <div className="reviewImgCont">
             {
             images.map(file => {
               return (
-              <div><img
+              <div className="singleImgCont"><img
                 src={URL.createObjectURL(file)}
                 className="reviewImage"
                 alt=""
               />
-              <button type="button"  onClick = {() => deleteImage(file)}>X</button>
+              <button className="deletePhoto" type="button"  onClick = {() => deleteImage(file)}> X </button>
               </div>)
               })
             }
+            </div>
             
             <div>
               <textarea

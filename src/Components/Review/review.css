@@ -75,7 +75,25 @@
   cursor: pointer;
 }
 
-.reviewImage{
+.reviewImage {
   width: 350px;
   height:200px;
+}
+
+.reviewImgCont {
+ display:flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+}
+
+.singleImgCont{
+  margin:5px;
+  position: relative;
+}
+.deletePhoto {
+  position: absolute;
+  top:0;
+  right:5px;
+  font-weight:bold;
+  padding: 2px;
 }
