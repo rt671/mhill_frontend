@@ -7,7 +7,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
         axios
-            .get("https://api.mhilladventure.com/reviews/all")
+            .get("http://localhost:5000/reviews/all")
             .then((res) => {
             setReviews(res.data);
             console.log(res.data);
@@ -18,7 +18,7 @@ const Reviews = () => {
     const deleteReview = (id) => {
         console.log(id);
         axios
-            .delete("https://api.mhilladventure.com/reviews/" + id)
+            .delete("http://localhost:5000/reviews/" + id)
             .then((res) => {
                 console.log(id)
             // console.log("Deleted");

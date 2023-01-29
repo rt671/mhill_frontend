@@ -32,7 +32,7 @@ const Details = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.mhilladventure.com/trips/" + path)
+      .get("http://localhost:5000/trips/" + path)
       .then((res) => {
         console.log(res.data);
         setTrip(res.data);

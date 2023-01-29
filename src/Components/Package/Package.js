@@ -12,7 +12,7 @@ const Package = () => {
   useEffect(() => {
     if(path==='all')
     {
-      axios.get("https://api.mhilladventure.com/trips/all")
+      axios.get("http://localhost:5000/trips/all")
       .then(res => {
         setTrips(res.data);
       })
@@ -20,7 +20,7 @@ const Package = () => {
     }
     else{
     axios
-      .get("https://api.mhilladventure.com/trips/seasons/" + path)
+      .get("http://localhost:5000/trips/seasons/" + path)
       .then((res) => {
         console.log(res.data);
         setTrips(res.data);

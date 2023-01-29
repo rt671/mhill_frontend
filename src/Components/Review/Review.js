@@ -69,9 +69,12 @@ const Review = () => {
     if (images.length>0) {
       const data = new FormData();
       images.map(file => {
+        console.log(file);
         console.log(file.name);
-        const filename = Date.now() + file.name;
+        console.log(file.name.split('.')[1]);
+        const filename = file.name.split('.')[0] + '-' + Math.floor(Date.now()/1000) + '.' + file.name.split('.')[1] ;
         data.append("name", filename);
+        // console.log(file.originalname);
         data.append("files", file);
        imgNameArr.push(filename);
       })
@@ -117,6 +120,10 @@ const Review = () => {
               <p>{review.rating}</p>
               <Rating initialValue={review.rating} readonly={true}></Rating>
               <div className="reviewAuthor">{review.author}</div>
+              {/* {review.image.length>0 && 
+              <CarouselComponent photos={trip.photos}></CarouselComponent>
+            }  */}
+
               {review.image.length>0 && review.image.map(image => {
                 return (<img
                 src={PF + image}
