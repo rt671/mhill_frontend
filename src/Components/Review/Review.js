@@ -10,7 +10,7 @@ const Review = () => {
 
   useEffect(() => {
     axios
-      .get("https://api.mhilladventure.com/all")
+      .get("https://api.mhilladventure.com/reviews/all")
       .then((res) => {
         setReviews(res.data);
         console.log(res.data);
@@ -79,6 +79,7 @@ const Review = () => {
         data.append("files", file);
        imgNameArr.push(filename);
       })
+      console.log("Uploading...")
       newReview.image = imgNameArr;
       axios
         .post("https://api.mhilladventure.com/upload/", data)
@@ -88,7 +89,7 @@ const Review = () => {
             .post("https://api.mhilladventure.com/reviews/", newReview)
             .then((res) => {
               console.log("Posted the review!");
-              window.location.replace("/");
+              // window.location.replace("/");
             })
             .catch((err) => console.log("err"));
         })

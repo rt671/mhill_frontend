@@ -48,7 +48,7 @@ const Details = () => {
   return (
     <div className="trip">
       <div className="tripMain">
-        <CarouselComponent photos={trip.photos} classname="details"></CarouselComponent>
+        <CarouselComponent photos={trip.photos} classname="detailscar"></CarouselComponent>
         <h1 className="tripDest">{trip.destination}</h1>
         <h2 className="tripState">{trip.state}</h2>
       </div>
@@ -87,7 +87,7 @@ const Details = () => {
                   <div className="expand" >+</div>
                 </div>
                 {dayDetail[idx] && (
-                  <div>
+                  <div className="dayInfo">
                     {it.detail.map((para) => {
                       return <p className="details">{para}</p>;
                     })}

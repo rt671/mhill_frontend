@@ -9,7 +9,7 @@ const CarouselComponent = ({photos, classname}) => {
     console.log(photos);
     console.log("length is ", photos.length);
     let number;
-    if(classname==="details") number=0;
+    if(classname==="detailscar") number=0;
     else number = 4;
   return (
     <div className="carousel-wrapper">
